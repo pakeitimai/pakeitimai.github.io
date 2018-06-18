@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>VK EIF PAKEITIMAI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- stylesheet for demo and examples -->
+
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+		  integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+	<link rel="manifest" href="/manifest.json">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="firebase.js"></script>
+	<script src="jquery-1.10.2.js"></script>
+	<script src="pikaday.js"></script>
+	<script src="moment/min/moment.min.js"></script>
+	<script src="moment/min/moment-with-locales.min.js"></script>
+	<script src="/pwabuilder-sw-register.js"></script>
+
+
+	<!-- custom scrollbar stylesheet -->
+<script>function startTime() {
+
+    let today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+
+    //let timeInminutes = Number(h * 60) + Number(m);
+    // console.log(timeInminutes);
+
+    let siandien = moment();
+    siandien.locale('lt');
+    $('#txt').text(siandien.format('YYYY MM DD, dddd,').toUpperCase() + " " + h + ":" + m + ":" + s);
+    //document.getElementById('txt').innerHTML =+ "GEGUŽĖ 2018, TREČIADIENIS," +h + ":" + m + ":" + s;
+
+    if (h === 0 && m === 0 && s >= 55) {
+        location.reload();
+        let sessionsRef = firebase.database().ref("user-posts/sessions");
+        sessionsRef.set({
+            startedAt: firebase.database.ServerValue.TIMESTAMP
+        });
+        //window.location.reload(true);
+    }
+
+    if (h === 5 && m === 58 && s >= 50) {
+        location.reload();
+        let sessionsRef = firebase.database().ref("user-posts/sessions");
+        sessionsRef.set({
+            startedAt: firebase.database.ServerValue.TIMESTAMP
+        });
+
+    }
+
+    let t = setTimeout(startTime, 500);
+
+}
+
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i
+    } // add zero in front of numbers < 10
+    return i;
+}
+
+
+</script>
+
+	<style>
+
+		table {
+			/*border: 1px solid #ccc;*/
+			border-collapse: collapse;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			font-size: 20pt;
+			table-layout: fixed;
+		}
+
+		table caption {
+			font-size: 1.5em;
+			margin: .5em 0 .75em;
+		}
+
+		table tr {
+			background-color: #cccccc;
+			/*border: 1px solid #ddd;*/
+			/*padding: .35em;*/
+		}
+
+		table th,
+		table td {
+			padding: .625em;
+			text-align: center;
+		}
+
+		table th {
+			/*font-size: .85em;*/
+			letter-spacing: .1em;
+			text-transform: uppercase;
+		}
+
+		/*@media screen and (max-width: 680px) {*/
+			/*table {*/
+				/*border: 0;*/
+				/*font-size: 12pt;*/
+
+			/*}*/
+			/*table caption {*/
+				/*font-size: 1.3em;*/
+			/*}*/
+
+			/*table thead {*/
+				/*border: none;*/
+				/*clip: rect(0 0 0 0);*/
+				/*height: 1px;*/
+				/*margin: -1px;*/
+				/*overflow: hidden;*/
+				/*padding: 0;*/
+				/*position: absolute;*/
+				/*width: 1px;*/
+			/*}*/
+
+			/*table tr {*/
+				/*!*border-bottom: 3px solid #ddd;*!*/
+				/*display: block;*/
+				/*margin-bottom: .625em;*/
+			/*}*/
+
+			/*table td {*/
+				/*!*border-bottom: 1px solid #ddd;*!*/
+				/*display: block;*/
+				/*!*font-size: .8em;*!*/
+				/*!*text-align: right;*!*/
+			/*}*/
+
+			/*table td::before {*/
+				/*!**/
+                /** aria-label has no advantage, it won't be read inside a table*/
+                /*content: attr(aria-label);*/
+                /**!*/
+				/*content: attr(data-label);*/
+				/*float: left;*/
+				/*font-weight: bold;*/
+				/*text-transform: uppercase;*/
+			/*}*/
+
+			/*table td:last-child {*/
+				/*border-bottom: 0;*/
+			/*}*/
+			/*.table-striped > tbody > tr:nth-child(odd) > td,*/
+			/*.table-striped > tbody > tr:nth-child(odd) > th {*/
+				/*background-color: #607d8b!important;*/
+				/*color:white;*/
+				/*font-weight: bold;*/
+			/*/ / Choose your own color here*/
+			/*}*/
+		/*}*/
+
+
+
+
+		p.active {
+			background-color: #e91e63;
+			color: white;
+		}
+
+
+
+		 table tbody{
+			 background-color: #ffeb3b78;
+		 }
+
+
+
+
+		@media screen and (max-width: 680px) {
+			::-webkit-scrollbar {
+				width: 1px;
+				height: 1px;
+			}
+
+			::-webkit-scrollbar-button {
+				width: 10px;
+				height: 10px;
+				background-color: #0092ef;
+			}
+			footer{
+				font-size: 12pt!important;
+
+			}
+			table tr, th{
+				display: none;
+			}
+			table tbody:first-child{
+				display: none;
+			}
+			table {
+				border: 0;
+				font-size: 12pt;
+
+			}
+
+
+			table caption {
+				font-size: 1.3em;
+			}
+
+			table thead {
+				border: none;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+			table tr {
+				/*border-bottom: 3px solid #ddd;*/
+				display: block;
+				margin-bottom: .625em;
+				background-color: #cccccc;
+			}
+
+			table td {
+				/*border-bottom: 1px solid #ddd;*/
+				display: block;
+				color: #49226c!important;
+				background-color: #3f51b5!important;
+
+				/*font-size: .8em;*/
+				/*text-align: right;*/
+			}
+
+			table td::before {
+				/*
+                * aria-label has no advantage, it won't be read inside a table
+                content: attr(aria-label);
+                */
+				content: attr(data-label);
+				float: left;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			table td:last-child {
+				border-bottom: 0;
+			}
+
+			.table-dark td{
+				border-top: none;
+				border-bottom: 1px solid #49226c;
+				text-align: right!important;
+
+			}
+
+			.table-striped > tbody > tr:nth-child(odd) > td,
+			.table-striped > tbody > tr:nth-child(odd) > th {
+				background-color: white!important;
+				color:#49226c;
+				font-weight: bold;
+				border-bottom: 1px solid #49226c;
+				text-align: right;
+
+			/ / Choose your own color here
+			}
+			.table-striped > tbody > tr:nth-child(even) > td,
+			.table-striped > tbody > tr:nth-child(even) > th {
+
+
+			    color: white!important;
+				text-align: right!important;
+
+			/ / Choose your own color here
+			}
+
+
+
+
+		}
+
+
+
+
+
+
+		body{
+			background-color: #00308f;
+			font-family: "Verdana", Geneva, sans-serif;
+			overscroll-behavior-y: contain;
+		}
+		div {
+			box-sizing: border-box;
+		}
+
+
+		@media screen and (max-width: 800px) {
+			.horizontal-scroll-wrapper {max-height: 450px!important; z-index: 2000;}
+		}
+
+
+		.horizontal-scroll-wrapper {
+			z-index: 2000;
+			position: fixed;
+			display: block;
+			top: 0;
+			left: 0;
+			width: calc(150px + 1px);
+			max-height: 2500px;
+			margin: 0;
+			padding-top: 1px;
+			/*background: #0092ef;*/
+			overflow-y: auto;
+			overflow-x: hidden;
+			-webkit-transform: rotate(-90deg) translateY(-150px);
+			transform: rotate(-90deg) translateY(-150px);
+			-webkit-transform-origin: right top;
+			transform-origin: right top;
+		}
+		.horizontal-scroll-wrapper > div {
+			display: block;
+			padding: 5px;
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+			-webkit-transform-origin: right top;
+			transform-origin: right top;
+		}
+
+		.squares {
+			padding: 150px 0 0 0;
+		}
+		.squares > div {
+			width: 150px;
+			height: 150px;
+			margin: 10px 0;
+		}
+
+		.table-dark th {
+			background-color: darkblue !important;
+			color:white!important;
+			font-weight:bold;
+
+		}
+		.table-dark td{
+			border-top: none;
+		}
+
+		.table-striped > tbody > tr:nth-child(odd) > td,
+		.table-striped > tbody > tr:nth-child(odd) > th {
+			background-color: blue;
+			color:white;
+			font-weight: bold;
+		/ / Choose your own color here
+		}
+
+		.table-dark {
+
+			background-color: #cccccc;
+		}
+
+		.table-striped > tbody > tr:nth-child(even) > td,
+		.table-striped > tbody > tr:nth-child(even) > th {
+			background-color: darkblue;
+			color: white;
+			font-weight: bold;
+		/ / Choose your own color here
+		}
+
+
+		* {
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: -moz-none;
+			-o-user-select: none;
+			user-select: none;
+		}
+
+		::-webkit-scrollbar
+		{
+			width: 5px;  /* for vertical scrollbars */
+			height: 5px; /* for horizontal scrollbars */
+		}
+
+		::-webkit-scrollbar-track
+		{
+			background: rgba(0, 0, 0, 0.1);
+		}
+
+		::-webkit-scrollbar-thumb
+		{
+			background: rgba(0, 0, 0, 0.5);
+		}
+
+	</style>
+
+</head>
+
+<body onload="startTime()">
+
+
+
+
+<div style="position: fixed;  background: #9e9e9e; min-height: 151px; width: 100%; top:0"></div>
+<div class="horizontal-scroll-wrapper squares ">
+
+</div>
+
+
+
+
+
+
+
+	<script>
+
+
+
+
+
+
+        let date = moment(new Date()),
+            begin = moment(date).isoWeekday(1);
+
+        begin.startOf('iweek');
+        begin.locale('lt');
+
+        let today = moment();
+        today.locale('lt');
+
+        let past_day = Number(today.format('DD') - 1);
+
+        // EIF LOGOTIPAS
+      //  $('div.horizontal-scroll-wrapper').append('<div style=""></div>');
+
+
+        for (let i = 0; i < 18; i++) {
+
+            $(".horizontal-scroll-wrapper").append('<div id="' + begin.format('DD') + '"' +
+                'style="background-color: white; color:black; align-items: center;   \n' +
+                '                 border:1px solid gray; padding: 5px;">\n' +
+                '          <p style="font-size: 45pt;" align="center" id="pid' + begin.format('DD') +
+				'">' +
+				begin.format('DD') + '</p>\n' +
+                '          <p style="font-weight: bold; padding:5px; font-size: 8pt; color:black; margin-top: -22px;" align="center">' +
+				moment(begin).locale('lt').format('dddd').toUpperCase() + '</p>\n' +
+                '<div style="font-size: 10pt;     margin-top: -25px;" align="center" id="stateid' +
+				begin.format('DD') +
+				'">' +
+                begin.format('MMMM', 'lt').toUpperCase() + '</div>' +
+                '        </div>');
+
+            if (i === 5 || i === 6) {
+                console.log(begin.format('DD'));
+                $("#" + begin.format('DD')).hide();
+            }
+            // Kalendoriaus elementu krastai
+//                $('p#pid' + begin.format('DD')).css({'border': '1px solid grey', "padding":"0",
+//                    "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
+            $('div#' + begin.format('DD')).css({'border-right': '2px solid grey'});
+            $('p#pid' + begin.format('DD')).css({'border': '2px solid grey', "padding":"10px",
+                "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
+
+            // -moz-box-sizing: border-box;
+            //-webkit-box-sizing: border-box;
+            begin.add(1, 'd');
+
+        }
+
+        for (let k = 1; k < 10; k++) {
+            $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+                "color": "grey"});
+            if($('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+                "color": "grey"})){
+
+                $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+                    "color": "grey"}).remove();
+
+                //alert('PRAEJUSI DIENA');
+			}
+
+        }
+
+        // $('div#' + today.format('DD')).css({'border': '7px solid black', "border-radius":"20px"});
+
+
+
+
+        $('p#pid' + today.format('DD')).css({'border': '2px solid #e91e63',"box-sizing": "border-box",
+            "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
+
+        $('p#pid' + today.format('DD')).addClass('active');
+
+        let siandien = moment();
+
+        $('p#pasirinkta_diena').text('' + siandien.format('DD'));
+
+        $('.horizontal-scroll-wrapper p:nth-child(odd)').click(function (e) {
+            let diena = $(e.target).text();
+            $('p#pasirinkta_diena').text(diena);
+
+            if ($(e.target).css('color') === 'rgb(128, 128, 128)') {
+                console.log('Praėjusi diena.');
+            } else {
+                $('p.active').removeClass('active'); //Clear all checked class on .size
+                $('p#pid' + diena).addClass('active'); //Add checked class to current clicked .size
+				console.log(diena.toString());
+                readAndDisplayData(diena.toString());
+            }
+        });
+	</script>
+
+
+
+	<!--<div class="container" style="float: left; width: 100%; margin-top: 0px; ">-->
+
+		<!--<table class="table table-dark table-striped" id="pakeitimai">-->
+			<!--<thead>-->
+			<!--<tr>-->
+				<!--<th>Paskaita</th>-->
+				<!--<th>Grupė</th>-->
+				<!--<th>Dėstytojas</th>-->
+				<!--<th>Auditorija</th>-->
+			<!--</tr>-->
+			<!--</thead>-->
+			<!--<tbody>-->
+			<!--<tr>-->
+				<!--<td>[1] 7<sup>45</sup> - 9<sup>30</sup></td>-->
+				<!--<td>PI17A [1 pogr.]</td>-->
+				<!--<td>Marius Gžegoževskis</td>-->
+				<!--<td>420a</td>-->
+			<!--</tr>-->
+
+			<!--</tbody>-->
+		<!--</table>-->
+	<!--</div>-->
+
+	<!--END DESTYTOJU PAKEITIMU SARASAS-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="table table-dark table-striped" style="margin-top: 160px; width: 100%; margin-bottom: 50px;"
+		   id="pakeitimai">
+
+		<tbody>
+		<tr>
+			<td data-label="LAIKAS"><strong>[1] PASKAITA</strong> 7:45-9:15</td>
+			<td data-label="GRUPĖ">PI17A, PI17B, PI17C, PI17D</td>
+			<td data-label="DĖSTYTOJAS">Valdona Judickaite-Zukovske</td>
+			<td data-label="AUDITORIJA">420A</td>
+		</tr>
+		<tr>
+			<td data-label="LAIKAS"><strong>[1] PASKAITA</strong> 7:45-9:15</td>
+			<td data-label="GRUPĖ">PI17A, PI17B, PI17C, PI17D</td>
+			<td data-label="DĖSTYTOJAS">Valdona Judickaite-Zukovske</td>
+			<td data-label="AUDITORIJA">420A</td>
+		</tr>
+
+
+
+		</tbody>
+	</table>
+
+
+<div class="alert alert-success" id="success-alert" style="bottom:0; z-index: 3000; position: fixed; width: 100%;
+font-size: 15pt;">
+	<button type="button" class="close" data-dismiss="alert" style="font-size: 15pt">x</button>
+	<strong>Atnaujinta! </strong>Yra naujų pakeitimų!!!
+</div>
+
+
+<script>
+    // Firbease Init
+    const config = {
+        apiKey: "AIzaSyCRYVIHl_orktaBMwsmlQtMcOaeGO0FTQI",
+        authDomain: "eif-courses.firebaseapp.com",
+        databaseURL: "https://eif-courses.firebaseio.com",
+        projectId: "eif-courses",
+        storageBucket: "eif-courses.appspot.com",
+        messagingSenderId: "535363326769"
+    };
+    firebase.initializeApp(config);
+
+
+    function getChangesByDate() {
+
+        const dbRefObject = firebase.database().ref("user-posts/");
+
+        const pakeitimaiDiv = document.getElementById("pakeitimai");
+
+
+        dbRefObject.orderByChild('paskaita').on("child_added", function (snapshot) {
+
+
+            $("#success-alert").fadeTo(3000, 500).slideUp(2000, function(){
+                $("#success-alert").slideUp(2000);
+            });
+        });
+
+
+
+        dbRefObject.orderByChild('paskaita').on("value", function (snapshot) {
+
+            //$("#myWish").click(function showAlert() {
+
+            //});
+            let destytoju_pakeitimai = "";
+
+            pakeitimaiDiv.innerHTML = "";
+
+            document.getElementById("pakeitimai").innerHTML =
+                '<tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' + '<th>AUDITORIJA</th></tr></thead>';
+
+            const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
+                "13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
+                " - 18<sup>30</sup>", "18<sup>45</sup> - 20<sup>15</sup>", "20<sup>30</sup> - 22<sup>00</sup>"];
+
+
+            snapshot.forEach(function (data) {
+
+                const newPlayer = data.val();
+
+                if (newPlayer.date === (moment().format('ddd MMM DD YYYY'))) {
+
+                    destytoju_pakeitimai +=
+                        '<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita
+						+'</b> '+
+                        '</td><td data-label="GRUPĖ"">' +
+						newPlayer.grupe.toUpperCase() +
+						'</td><td data-label="DĖSTYTOJAS"">' +
+                        newPlayer.destytojas +
+						'</td><td data-label="AUDITORIJA">' +
+						newPlayer.auditorija.toUpperCase() + '</td></tr>';
+                    //moment.locale('lt');
+
+                    let today = moment();
+                    today.locale('lt');
+
+                }
+            });
+            pakeitimaiDiv.innerHTML += '<tbody>' + destytoju_pakeitimai + '</tbody>';
+           // pakeitimaiDiv.innerHTML += '<br/><br/>';
+        });
+
+    }
+    function stringifyTomorrow() {
+        let today = moment();
+        let tomorrow = today.add(1, 'days');
+        return moment(tomorrow).format("ddd MMM DD YYYY");
+    }
+
+    function currentDay() {
+        let today = moment();
+        today.locale('lt');
+
+    }
+
+    //  currentDay();
+    function nextDay() {
+        let today = moment();
+        let tomorrow = today.add(1, 'days');
+        tomorrow.locale('lt');
+
+        document.getElementById("tommorow").innerText = tomorrow.format('DD');
+        document.getElementById("currentMonthTommorow").innerText = tomorrow.format('MMMM', 'lt').toUpperCase();
+        document.getElementById("currentWeekDayTomorrow").innerText = tomorrow.format('dddd', 'lt').toUpperCase();
+
+    }
+
+    getChangesByDate();
+
+
+</script>
+<script>
+
+    function readAndDisplayData(diena) {
+
+        const dbRefObject = firebase.database().ref("user-posts/");
+
+        const pakeitimaiDiv = document.getElementById("pakeitimai");
+        let date_from_user = diena;
+
+// TODO REIKIA PRIDETI LEMTELES ANTRASTE SEKANCIA IS PASKOS
+        dbRefObject.orderByChild('paskaita').on("value", function (snapshot) {
+            let keitimai = "";
+            pakeitimaiDiv.innerHTML = "";
+
+            document.getElementById("pakeitimai").innerHTML =
+                '<thead><tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' +
+				'<th>AUDITORIJA</th></tr></thead>';
+
+            const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
+                "13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
+                " - 18<sup>30</sup>", "18<sup>45</sup> - 20<sup>15</sup>", "20<sup>30</sup> - 22<sup>00</sup>"];
+
+            snapshot.forEach(function (data) {
+
+                const newPlayer = data.val();
+
+                let menuo = moment(newPlayer.date).locale('lt').format('MMMM');
+                let pasirinkta_diena_is_kalendoriaus = $('#stateid' + date_from_user).text();
+
+                // TODO need FIX IF STATEMENT BLOGAI TIKRINA NEKREIPIA DEMESIO I EINAMUOSIUS METUS !!!!!!
+                if (moment(newPlayer.date).format('DD') === date_from_user && menuo.toUpperCase() ===
+                    pasirinkta_diena_is_kalendoriaus && moment(newPlayer.date).format('YYYY') ===
+					$('footer#txt').text().substr(0, 4)) {
+                    keitimai +=
+                        '<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita +
+						'</b> '+
+                        '</td><td data-label="GRUPĖ">' + newPlayer.grupe.toUpperCase() +
+						'</td><td data-label="DĖSTYTOJAS">' +
+                        newPlayer.destytojas + '</td><td data-label="AUDITORIJA">' +
+						newPlayer.auditorija.toUpperCase() + '</td></tr>';
+                }
+
+            });
+            pakeitimaiDiv.innerHTML += '<tbody>' + keitimai + '</tbody>';
+            //pakeitimaiDiv.innerHTML += '<br/>';
+        });
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+<p id="pasirinkta_diena" style="color:#00308f;">
+
+</p>
+
+<footer id="txt" style="position: fixed; font-size: 25pt; bottom: 0; background-color: darkblue; color: white; padding:
+2px;
+font-weight: bold; width: 100%; text-align: center";>
+
+</footer>
+</body>
+</html>
