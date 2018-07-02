@@ -21,54 +21,54 @@
 
 
 	<!-- custom scrollbar stylesheet -->
-<script>function startTime() {
+	<script>function startTime() {
 
-    let today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    let s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
+        let today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
 
-    //let timeInminutes = Number(h * 60) + Number(m);
-    // console.log(timeInminutes);
+        //let timeInminutes = Number(h * 60) + Number(m);
+        // console.log(timeInminutes);
 
-    let siandien = moment();
-    siandien.locale('lt');
-    $('#txt').text(siandien.format('YYYY MM DD, dddd,').toUpperCase() + " " + h + ":" + m + ":" + s);
-    //document.getElementById('txt').innerHTML =+ "GEGUŽĖ 2018, TREČIADIENIS," +h + ":" + m + ":" + s;
+        let siandien = moment();
+        siandien.locale('lt');
+        $('#txt').text(siandien.format('YYYY MM DD, dddd,').toUpperCase() + " " + h + ":" + m + ":" + s);
+        //document.getElementById('txt').innerHTML =+ "GEGUŽĖ 2018, TREČIADIENIS," +h + ":" + m + ":" + s;
 
-    if (h === 0 && m === 0 && s >= 55) {
-        location.reload();
-        let sessionsRef = firebase.database().ref("user-posts/sessions");
-        sessionsRef.set({
-            startedAt: firebase.database.ServerValue.TIMESTAMP
-        });
-        //window.location.reload(true);
+        if (h === 0 && m === 0 && s >= 55) {
+            location.reload();
+            let sessionsRef = firebase.database().ref("user-posts/sessions");
+            sessionsRef.set({
+                startedAt: firebase.database.ServerValue.TIMESTAMP
+            });
+            //window.location.reload(true);
+        }
+
+        if (h === 5 && m === 58 && s >= 50) {
+            location.reload();
+            let sessionsRef = firebase.database().ref("user-posts/sessions");
+            sessionsRef.set({
+                startedAt: firebase.database.ServerValue.TIMESTAMP
+            });
+
+        }
+
+        let t = setTimeout(startTime, 500);
+
     }
 
-    if (h === 5 && m === 58 && s >= 50) {
-        location.reload();
-        let sessionsRef = firebase.database().ref("user-posts/sessions");
-        sessionsRef.set({
-            startedAt: firebase.database.ServerValue.TIMESTAMP
-        });
-
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        } // add zero in front of numbers < 10
+        return i;
     }
 
-    let t = setTimeout(startTime, 500);
 
-}
-
-function checkTime(i) {
-    if (i < 10) {
-        i = "0" + i
-    } // add zero in front of numbers < 10
-    return i;
-}
-
-
-</script>
+	</script>
 
 	<style>
 
@@ -106,60 +106,60 @@ function checkTime(i) {
 		}
 
 		/*@media screen and (max-width: 680px) {*/
-			/*table {*/
-				/*border: 0;*/
-				/*font-size: 12pt;*/
+		/*table {*/
+		/*border: 0;*/
+		/*font-size: 12pt;*/
 
-			/*}*/
-			/*table caption {*/
-				/*font-size: 1.3em;*/
-			/*}*/
+		/*}*/
+		/*table caption {*/
+		/*font-size: 1.3em;*/
+		/*}*/
 
-			/*table thead {*/
-				/*border: none;*/
-				/*clip: rect(0 0 0 0);*/
-				/*height: 1px;*/
-				/*margin: -1px;*/
-				/*overflow: hidden;*/
-				/*padding: 0;*/
-				/*position: absolute;*/
-				/*width: 1px;*/
-			/*}*/
+		/*table thead {*/
+		/*border: none;*/
+		/*clip: rect(0 0 0 0);*/
+		/*height: 1px;*/
+		/*margin: -1px;*/
+		/*overflow: hidden;*/
+		/*padding: 0;*/
+		/*position: absolute;*/
+		/*width: 1px;*/
+		/*}*/
 
-			/*table tr {*/
-				/*!*border-bottom: 3px solid #ddd;*!*/
-				/*display: block;*/
-				/*margin-bottom: .625em;*/
-			/*}*/
+		/*table tr {*/
+		/*!*border-bottom: 3px solid #ddd;*!*/
+		/*display: block;*/
+		/*margin-bottom: .625em;*/
+		/*}*/
 
-			/*table td {*/
-				/*!*border-bottom: 1px solid #ddd;*!*/
-				/*display: block;*/
-				/*!*font-size: .8em;*!*/
-				/*!*text-align: right;*!*/
-			/*}*/
+		/*table td {*/
+		/*!*border-bottom: 1px solid #ddd;*!*/
+		/*display: block;*/
+		/*!*font-size: .8em;*!*/
+		/*!*text-align: right;*!*/
+		/*}*/
 
-			/*table td::before {*/
-				/*!**/
-                /** aria-label has no advantage, it won't be read inside a table*/
-                /*content: attr(aria-label);*/
-                /**!*/
-				/*content: attr(data-label);*/
-				/*float: left;*/
-				/*font-weight: bold;*/
-				/*text-transform: uppercase;*/
-			/*}*/
+		/*table td::before {*/
+		/*!**/
+		/** aria-label has no advantage, it won't be read inside a table*/
+		/*content: attr(aria-label);*/
+		/**!*/
+		/*content: attr(data-label);*/
+		/*float: left;*/
+		/*font-weight: bold;*/
+		/*text-transform: uppercase;*/
+		/*}*/
 
-			/*table td:last-child {*/
-				/*border-bottom: 0;*/
-			/*}*/
-			/*.table-striped > tbody > tr:nth-child(odd) > td,*/
-			/*.table-striped > tbody > tr:nth-child(odd) > th {*/
-				/*background-color: #607d8b!important;*/
-				/*color:white;*/
-				/*font-weight: bold;*/
-			/*/ / Choose your own color here*/
-			/*}*/
+		/*table td:last-child {*/
+		/*border-bottom: 0;*/
+		/*}*/
+		/*.table-striped > tbody > tr:nth-child(odd) > td,*/
+		/*.table-striped > tbody > tr:nth-child(odd) > th {*/
+		/*background-color: #607d8b!important;*/
+		/*color:white;*/
+		/*font-weight: bold;*/
+		/*/ / Choose your own color here*/
+		/*}*/
 		/*}*/
 
 
@@ -172,9 +172,9 @@ function checkTime(i) {
 
 
 
-		 table tbody{
-			 background-color: #ffeb3b78;
-		 }
+		table tbody{
+			background-color: #ffeb3b78;
+		}
 
 
 
@@ -275,7 +275,7 @@ function checkTime(i) {
 			.table-striped > tbody > tr:nth-child(even) > th {
 
 
-			    color: white!important;
+				color: white!important;
 				text-align: right!important;
 
 			/ / Choose your own color here
@@ -421,137 +421,130 @@ function checkTime(i) {
 
 <script src="js/jquery.min.js"></script>
 <script src="moment/min/moment-with-locales.min.js"></script>
-	<script>
+<script>
 
 
 
 
 
 
-        let date = moment(new Date()),
-            begin = moment(date).isoWeekday(1);
+    let date = moment(new Date()),
+        begin = moment(date).isoWeekday(1);
 
-        begin.startOf('iweek');
-        begin.locale('lt');
+    begin.startOf('iweek');
+    begin.locale('lt');
 
-        let today = moment();
-        today.locale('lt');
+    let today = moment();
+    today.locale('lt');
 
-        let past_day = Number(today.format('DD') - 1);
+    let past_day = Number(today.format('DD') - 1);
 
-        // EIF LOGOTIPAS
-      //  $('div.horizontal-scroll-wrapper').append('<div style=""></div>');
+    // EIF LOGOTIPAS
+    //  $('div.horizontal-scroll-wrapper').append('<div style=""></div>');
 
 
-        for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 18; i++) {
 
-            $(".horizontal-scroll-wrapper").append('<div id="' + begin.format('DD') + '"' +
-                'style="background-color: white; color:black; align-items: center;   \n' +
-                '                 border:1px solid gray; padding: 5px;">\n' +
-                '          <p style="font-size: 45pt;" align="center" id="pid' + begin.format('DD') +
-				'">' +
-				begin.format('DD') + '</p>\n' +
-                '          <p style="font-weight: bold; padding:5px; font-size: 8pt; color:black; margin-top: -22px;" align="center">' +
-				moment(begin).locale('lt').format('dddd').toUpperCase() + '</p>\n' +
-                '<div style="font-size: 10pt;     margin-top: -25px;" align="center" id="stateid' +
-				begin.format('DD') +
-				'">' +
-                begin.format('MMMM', 'lt').toUpperCase() + '</div>' +
-                '        </div>');
+        $(".horizontal-scroll-wrapper").append('<div id="' + begin.format('DD') + '"' +
+            'style="background-color: white; color:black; align-items: center;   \n' +
+            '                 border:1px solid gray; padding: 5px;">\n' +
+            '          <p style="font-size: 45pt;" align="center" id="pid' + begin.format('DD') +
+            '">' +
+            begin.format('DD') + '</p>\n' +
+            '          <p style="font-weight: bold; padding:5px; font-size: 8pt; color:black; margin-top: -22px;" align="center">' +
+            moment(begin).locale('lt').format('dddd').toUpperCase() + '</p>\n' +
+            '<div style="font-size: 10pt;     margin-top: -25px;" align="center" id="stateid' +
+            begin.format('DD') +
+            '">' +
+            begin.format('MMMM', 'lt').toUpperCase() + '</div>' +
+            '        </div>');
 
-            if (i === 5 || i === 6) {
-                console.log(begin.format('DD'));
-                $("#" + begin.format('DD')).hide();
-            }
-            // Kalendoriaus elementu krastai
+        if (i === 5 || i === 6) {
+            console.log(begin.format('DD'));
+            $("#" + begin.format('DD')).hide();
+        }
+        // Kalendoriaus elementu krastai
 //                $('p#pid' + begin.format('DD')).css({'border': '1px solid grey', "padding":"0",
 //                    "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
-            $('div#' + begin.format('DD')).css({'border-right': '2px solid grey'});
-            $('p#pid' + begin.format('DD')).css({'border': '2px solid grey', "padding":"10px",
-                "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
+        $('div#' + begin.format('DD')).css({'border-right': '2px solid grey'});
+        $('p#pid' + begin.format('DD')).css({'border': '2px solid grey', "padding":"10px",
+            "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
 
-            // -moz-box-sizing: border-box;
-            //-webkit-box-sizing: border-box;
-            begin.add(1, 'd');
+        // -moz-box-sizing: border-box;
+        //-webkit-box-sizing: border-box;
+        begin.add(1, 'd');
 
-        }
+    }
 
-        for (let k = 1; k < 10; k++) {
-            $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
-                "color": "grey"});
-            if($('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+    for (let k = 1; k < 10; k++) {
+        $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+            "color": "grey"});
+        if($('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
                 "color": "grey"})){
 
-                $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
-                    "color": "grey"}).remove();
+            $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+                "color": "grey"}).remove();
 
-                //alert('PRAEJUSI DIENA');
-			}
-
+            //alert('PRAEJUSI DIENA');
         }
 
-        // $('div#' + today.format('DD')).css({'border': '7px solid black', "border-radius":"20px"});
+    }
+
+    // $('div#' + today.format('DD')).css({'border': '7px solid black', "border-radius":"20px"});
 
 
 
 
-        $('p#pid' + today.format('DD')).css({'border': '2px solid #e91e63',"box-sizing": "border-box",
-            "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
+    $('p#pid' + today.format('DD')).css({'border': '2px solid #e91e63',"box-sizing": "border-box",
+        "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
 
-        $('p#pid' + today.format('DD')).addClass('active');
+    $('p#pid' + today.format('DD')).addClass('active');
 
-        let siandien = moment();
+    let siandien = moment();
 
-        $('p#pasirinkta_diena').text('' + siandien.format('DD'));
+    $('p#pasirinkta_diena').text('' + siandien.format('DD'));
 
-        $('.horizontal-scroll-wrapper p:nth-child(odd)').click(function (e) {
-            let diena = $(e.target).text();
-            $('p#pasirinkta_diena').text(diena);
+    $('.horizontal-scroll-wrapper p:nth-child(odd)').click(function (e) {
+        let diena = $(e.target).text();
+        $('p#pasirinkta_diena').text(diena);
 
-            if ($(e.target).css('color') === 'rgb(128, 128, 128)') {
-                console.log('Praėjusi diena.');
-            } else {
-                $('p.active').removeClass('active'); //Clear all checked class on .size
-                $('p#pid' + diena).addClass('active'); //Add checked class to current clicked .size
-				console.log(diena.toString());
-                readAndDisplayData(diena.toString());
-            }
-        });
-	</script>
-
-
-
-	<!--<div class="container" style="float: left; width: 100%; margin-top: 0px; ">-->
-
-		<!--<table class="table table-dark table-striped" id="pakeitimai">-->
-			<!--<thead>-->
-			<!--<tr>-->
-				<!--<th>Paskaita</th>-->
-				<!--<th>Grupė</th>-->
-				<!--<th>Dėstytojas</th>-->
-				<!--<th>Auditorija</th>-->
-			<!--</tr>-->
-			<!--</thead>-->
-			<!--<tbody>-->
-			<!--<tr>-->
-				<!--<td>[1] 7<sup>45</sup> - 9<sup>30</sup></td>-->
-				<!--<td>PI17A [1 pogr.]</td>-->
-				<!--<td>Marius Gžegoževskis</td>-->
-				<!--<td>420a</td>-->
-			<!--</tr>-->
-
-			<!--</tbody>-->
-		<!--</table>-->
-	<!--</div>-->
-
-	<!--END DESTYTOJU PAKEITIMU SARASAS-->
+        if ($(e.target).css('color') === 'rgb(128, 128, 128)') {
+            console.log('Praėjusi diena.');
+        } else {
+            $('p.active').removeClass('active'); //Clear all checked class on .size
+            $('p#pid' + diena).addClass('active'); //Add checked class to current clicked .size
+            console.log(diena.toString());
+            readAndDisplayData(diena.toString());
+        }
+    });
+</script>
 
 
 
+<!--<div class="container" style="float: left; width: 100%; margin-top: 0px; ">-->
 
+<!--<table class="table table-dark table-striped" id="pakeitimai">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>Paskaita</th>-->
+<!--<th>Grupė</th>-->
+<!--<th>Dėstytojas</th>-->
+<!--<th>Auditorija</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td>[1] 7<sup>45</sup> - 9<sup>30</sup></td>-->
+<!--<td>PI17A [1 pogr.]</td>-->
+<!--<td>Marius Gžegoževskis</td>-->
+<!--<td>420a</td>-->
+<!--</tr>-->
 
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
 
-
+<!--END DESTYTOJU PAKEITIMU SARASAS-->
 
 
 
@@ -584,27 +577,34 @@ function checkTime(i) {
 
 
 
-	<table class="table table-dark table-striped" style="margin-top: 160px; width: 100%; margin-bottom: 50px;"
-		   id="pakeitimai">
-
-		<tbody>
-		<tr>
-			<td data-label="LAIKAS"><strong>[1] PASKAITA</strong> 7:45-9:15</td>
-			<td data-label="GRUPĖ">PI17A, PI17B, PI17C, PI17D</td>
-			<td data-label="DĖSTYTOJAS">Valdona Judickaite-Zukovske</td>
-			<td data-label="AUDITORIJA">420A</td>
-		</tr>
-		<tr>
-			<td data-label="LAIKAS"><strong>[1] PASKAITA</strong> 7:45-9:15</td>
-			<td data-label="GRUPĖ">PI17A, PI17B, PI17C, PI17D</td>
-			<td data-label="DĖSTYTOJAS">Valdona Judickaite-Zukovske</td>
-			<td data-label="AUDITORIJA">420A</td>
-		</tr>
 
 
 
-		</tbody>
-	</table>
+
+
+
+
+<table class="table table-dark table-striped" style="margin-top: 160px; width: 100%; margin-bottom: 50px;"
+	   id="pakeitimai">
+
+	<tbody>
+	<tr>
+		<td data-label="LAIKAS"><strong>[1] PASKAITA</strong> 7:45-9:15</td>
+		<td data-label="GRUPĖ">PI17A, PI17B, PI17C, PI17D</td>
+		<td data-label="DĖSTYTOJAS">Valdona Judickaite-Zukovske</td>
+		<td data-label="AUDITORIJA">420A</td>
+	</tr>
+	<tr>
+		<td data-label="LAIKAS"><strong>[1] PASKAITA</strong> 7:45-9:15</td>
+		<td data-label="GRUPĖ">PI17A, PI17B, PI17C, PI17D</td>
+		<td data-label="DĖSTYTOJAS">Valdona Judickaite-Zukovske</td>
+		<td data-label="AUDITORIJA">420A</td>
+	</tr>
+
+
+
+	</tbody>
+</table>
 
 
 <div class="alert alert-success" id="success-alert" style="bottom:0; z-index: 3000; position: fixed; width: 100%;
@@ -672,13 +672,13 @@ font-size: 15pt;">
 
                     destytoju_pakeitimai +=
                         '<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita
-						+'</b> '+
+                        +'</b> '+
                         '</td><td data-label="GRUPĖ"">' +
-						newPlayer.grupe.toUpperCase() +
-						'</td><td data-label="DĖSTYTOJAS"">' +
+                        newPlayer.grupe.toUpperCase() +
+                        '</td><td data-label="DĖSTYTOJAS"">' +
                         newPlayer.destytojas +
-						'</td><td data-label="AUDITORIJA">' +
-						newPlayer.auditorija.toUpperCase() + '</td></tr>';
+                        '</td><td data-label="AUDITORIJA">' +
+                        newPlayer.auditorija.toUpperCase() + '</td></tr>';
                     //moment.locale('lt');
 
                     let today = moment();
@@ -687,7 +687,7 @@ font-size: 15pt;">
                 }
             });
             pakeitimaiDiv.innerHTML += '<tbody>' + destytoju_pakeitimai + '</tbody>';
-           // pakeitimaiDiv.innerHTML += '<br/><br/>';
+            // pakeitimaiDiv.innerHTML += '<br/><br/>';
         });
 
     }
@@ -735,7 +735,7 @@ font-size: 15pt;">
 
             document.getElementById("pakeitimai").innerHTML =
                 '<thead><tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' +
-				'<th>AUDITORIJA</th></tr></thead>';
+                '<th>AUDITORIJA</th></tr></thead>';
 
             const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
                 "13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
@@ -751,14 +751,14 @@ font-size: 15pt;">
                 // TODO need FIX IF STATEMENT BLOGAI TIKRINA NEKREIPIA DEMESIO I EINAMUOSIUS METUS !!!!!!
                 if (moment(newPlayer.date).format('DD') === date_from_user && menuo.toUpperCase() ===
                     pasirinkta_diena_is_kalendoriaus && moment(newPlayer.date).format('YYYY') ===
-					$('footer#txt').text().substr(0, 4)) {
+                    $('footer#txt').text().substr(0, 4)) {
                     keitimai +=
                         '<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita +
-						'</b> '+
+                        '</b> '+
                         '</td><td data-label="GRUPĖ">' + newPlayer.grupe.toUpperCase() +
-						'</td><td data-label="DĖSTYTOJAS">' +
+                        '</td><td data-label="DĖSTYTOJAS">' +
                         newPlayer.destytojas + '</td><td data-label="AUDITORIJA">' +
-						newPlayer.auditorija.toUpperCase() + '</td></tr>';
+                        newPlayer.auditorija.toUpperCase() + '</td></tr>';
                 }
 
             });
