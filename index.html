@@ -179,11 +179,19 @@
 
 
 
-		@media screen and (max-width: 680px) {
+		@media screen and (max-width: 800px) {
 			::-webkit-scrollbar {
 				width: 1px;
 				height: 1px;
 			}
+
+			table tr, td {
+				font-size: 0.6em;
+			}
+			table th{
+				font-size:0.5em;
+			}
+
 
 			::-webkit-scrollbar-button {
 				width: 10px;
@@ -191,105 +199,51 @@
 				background-color: #0092ef;
 			}
 			footer{
-				font-size: 12pt!important;
+				font-size:1em!important;
 
 			}
-			table tr, th{
-				display: none;
-			}
-			table tbody:first-child{
-				display: none;
-			}
-			table {
-				border: 0;
-				font-size: 12pt;
+			.horizontal-scroll-wrapper {max-height: 450px!important;
+				z-index: 2000;
 
-			}
-
-
-			table caption {
-				font-size: 1.3em;
-			}
-
-			table thead {
-				border: none;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-
-			table tr {
-				/*border-bottom: 3px solid #ddd;*/
+				position: fixed;
 				display: block;
-				margin-bottom: .625em;
-				background-color: #cccccc;
-			}
+				top: 0;
+				left: 0;
+				width: calc(150px + 1px)!important;
+				margin: 0;
+				padding-top: 1px;
+				/*background: #0092ef;*/
+				overflow-y: auto;
+				overflow-x: hidden;
+				-webkit-transform: rotate(-90deg) translateY(-150px)!important;
+				transform: rotate(-90deg) translateY(-150px)!important;
+				-webkit-transform-origin: right top;
+				transform-origin: right top;
 
-			table td {
-				/*border-bottom: 1px solid #ddd;*/
-				display: block;
-				color: #49226c!important;
-				background-color: #3f51b5!important;
 
-				/*font-size: .8em;*/
-				/*text-align: right;*/
-			}
-
-			table td::before {
-				/*
-                * aria-label has no advantage, it won't be read inside a table
-                content: attr(aria-label);
-                */
-				content: attr(data-label);
-				float: left;
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-
-			table td:last-child {
-				border-bottom: 0;
-			}
-
-			.table-dark td{
-				border-top: none;
-				border-bottom: 1px solid #49226c;
-				text-align: right!important;
 
 			}
 
-			.table-striped > tbody > tr:nth-child(odd) > td,
-			.table-striped > tbody > tr:nth-child(odd) > th {
-				background-color: white!important;
-				color:#49226c;
-				font-weight: bold;
-				border-bottom: 1px solid #49226c;
-				text-align: right;
-
-			/ / Choose your own color here
+			.squares {
+				padding: 150px 0 0 0!important;
 			}
-			.table-striped > tbody > tr:nth-child(even) > td,
-			.table-striped > tbody > tr:nth-child(even) > th {
-
-
-				color: white!important;
-				text-align: right!important;
-
-			/ / Choose your own color here
+			.squares > div {
+				width: 150px!important;
+				height: 150px!important;
+				margin: 10px 0;
 			}
+
+			#virsutinis_menu{
+				background:#00308f!important;
+			}
+
+
+
 
 
 
 
 		}
-
-
-
-
-
 
 		body{
 			background-color: #00308f;
@@ -301,9 +255,7 @@
 		}
 
 
-		@media screen and (max-width: 800px) {
-			.horizontal-scroll-wrapper {max-height: 450px!important; z-index: 2000;}
-		}
+		
 
 
 		.horizontal-scroll-wrapper {
