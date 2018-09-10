@@ -4,6 +4,7 @@
     <list default="true" id="09317ed5-9c8d-43c4-9b53-f434003129c9" name="Default" comment="saerw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwabuilder-sw-register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pwabuilder-sw-register.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,41 +19,74 @@
     <session id="-592510788">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="632" />
+          <entry key="html" value="939" />
+          <entry key="js" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="632" />
+          <entry key="HTML" value="939" />
+          <entry key="JavaScript" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="ESLintLanguageService" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="526" lean-forward="true" selection-start-line="526" selection-end-line="526" />
+            <state relative-caret-position="-1520">
+              <caret line="607" column="94" lean-forward="true" selection-start-line="607" selection-start-column="94" selection-end-line="607" selection-end-column="94" />
               <folding>
                 <element signature="e#4148#5223#0" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1536605718161" expanded="true" signature="8052:8185" ph="..." />
-                <marker date="1536605718161" expanded="true" signature="8226:8242" ph="..." />
-                <marker date="1536605718161" expanded="true" signature="8387:8466" ph="..." />
-                <marker date="1536605718161" expanded="true" signature="8593:8632" ph="..." />
-                <marker date="1536605718161" expanded="true" signature="16098:16117" ph="..." />
-                <marker date="1536605718161" expanded="true" signature="19383:19402" ph="..." />
+                <marker date="1536607491448" expanded="true" signature="8052:8185" ph="..." />
+                <marker date="1536607491448" expanded="true" signature="8226:8242" ph="..." />
+                <marker date="1536607491448" expanded="true" signature="8387:8466" ph="..." />
+                <marker date="1536607491448" expanded="true" signature="8593:8632" ph="..." />
+                <marker date="1536607491448" expanded="true" signature="16995:17014" ph="..." />
+                <marker date="1536607491448" expanded="true" signature="20280:20299" ph="..." />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -97,6 +131,7 @@
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/pwabuilder-sw-register.js" />
       </list>
     </option>
   </component>
@@ -132,17 +167,6 @@
             <path>
               <item name="pakeitimai.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="pakeitimai.github.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pakeitimai.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pakeitimai.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pakeitimai.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pakeitimai.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="minified" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -206,7 +230,8 @@
       <workItem from="1534430867727" duration="1223000" />
       <workItem from="1534435831569" duration="140000" />
       <workItem from="1534435984137" duration="14000" />
-      <workItem from="1536598236953" duration="7440000" />
+      <workItem from="1536598236953" duration="8951000" />
+      <workItem from="1536607457961" duration="685000" />
     </task>
     <task id="LOCAL-00001" summary="saerw">
       <created>1534431122568</created>
@@ -243,20 +268,33 @@
       <option name="project" value="LOCAL" />
       <updated>1536603079662</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="saerw">
+      <created>1536605846059</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1536605846059</updated>
+    </task>
+    <task id="LOCAL-00007" summary="saerw">
+      <created>1536607219345</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1536607219345</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12781000" />
+    <option name="totallyTimeSpent" value="14977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24868283" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24868283" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49789253" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -264,9 +302,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5021075" side_tool="true" visible="true" weight="0.22101842" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021075" side_tool="true" visible="true" weight="0.22101842" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -308,17 +347,17 @@
     <entry file="file://$PROJECT_DIR$/index_source.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="526" lean-forward="true" selection-start-line="526" selection-end-line="526" />
+        <state relative-caret-position="-1520">
+          <caret line="607" column="94" lean-forward="true" selection-start-line="607" selection-start-column="94" selection-end-line="607" selection-end-column="94" />
           <folding>
             <element signature="e#4148#5223#0" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1536605718161" expanded="true" signature="8052:8185" ph="..." />
-            <marker date="1536605718161" expanded="true" signature="8226:8242" ph="..." />
-            <marker date="1536605718161" expanded="true" signature="8387:8466" ph="..." />
-            <marker date="1536605718161" expanded="true" signature="8593:8632" ph="..." />
-            <marker date="1536605718161" expanded="true" signature="16098:16117" ph="..." />
-            <marker date="1536605718161" expanded="true" signature="19383:19402" ph="..." />
+            <marker date="1536607491448" expanded="true" signature="8052:8185" ph="..." />
+            <marker date="1536607491448" expanded="true" signature="8226:8242" ph="..." />
+            <marker date="1536607491448" expanded="true" signature="8387:8466" ph="..." />
+            <marker date="1536607491448" expanded="true" signature="8593:8632" ph="..." />
+            <marker date="1536607491448" expanded="true" signature="16995:17014" ph="..." />
+            <marker date="1536607491448" expanded="true" signature="20280:20299" ph="..." />
           </folding>
         </state>
       </provider>
@@ -334,6 +373,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14042">
           <caret line="826" column="6" selection-start-line="826" selection-start-column="1" selection-end-line="826" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
         </state>
       </provider>
     </entry>

@@ -613,7 +613,8 @@
 					"Laisvi".toUpperCase()) {
                     var notify1 = new Notification("Nauji paskaitų pakeitimai!!!", {
                         body:
-                            newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + "Paskaitos nėra",
+                            newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", "+ newPost.paskaita+
+							" Paskaitos nėra",
                         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
 
                     });
