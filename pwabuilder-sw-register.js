@@ -8,14 +8,6 @@ if (navigator.serviceWorker.controller) {
   navigator.serviceWorker.register('pwabuilder-sw.js', {
     scope: './'
   }).then(function(reg) {
-
-
-      Notification.requestPermission(function(result) {
-          if (result === 'granted') {
-              navigator.serviceWorker.ready.then(function(registration) {
-                  registration.showNotification('Notification with ServiceWorker');
-              });
-          }
     console.log('Service worker has been registered for scope:'+ reg.scope);
   });
 }
