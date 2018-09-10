@@ -255,7 +255,7 @@
 		}
 
 
-		
+
 
 
 		.horizontal-scroll-wrapper {
@@ -354,7 +354,7 @@
 
 </head>
 
-<body onload="startTime()">
+<body onload="startTime(), myFunction()">
 
 
 
@@ -525,7 +525,19 @@
 
 
 
+<p id="demo"></p>
 
+<script>
+    function myFunction() {
+        Notification.requestPermission();
+        var person = prompt("Please enter your name", "Harry Potter");
+        if (person != null) {
+            localStorage.setItem("name", person);
+            document.getElementById("demo").innerHTML =
+                "Jus pasirinkote sia grupe"+person;
+        }
+    }
+</script>
 
 
 
@@ -589,12 +601,51 @@ font-size: 15pt;">
         const pakeitimaiDiv = document.getElementById("pakeitimai");
 
 
+
+
+
+        dbRefObject.once("child_added", function(snapshot, prevChildKey) {
+            var newPost = snapshot.val();
+            var local = localStorage.getItem("name");
+            console.log("Nauji duomenys: " + newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase());
+
+            if(newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() === local.toUpperCase()){
+                var notify = new Notification(local.toUpperCase()+" GRUPĖS STUDENTAMS");
+            }
+            //
+            // const v = snapshot.val();
+            // console.log(v.grupe.toUpperCase());
+			//
+            // if(v.grupe.toUpperCase() === local.toUpperCase()){
+            //     var notify = new Notification(local+" GRUPĖS STUDENTAMS", "YRA pakeitimų");
+            // }
+
+            //console.log("Title: " + newPost.title);
+            //console.log("Previous Post ID: " + prevChildKey);
+        });
+
+
+
+
+
+
+
+
+
+
         dbRefObject.orderByChild('paskaita').on("child_added", function (snapshot) {
 
+           // var local = localStorage.getItem("name");
+            //const v = snapshot.val();
+            //console.log(v.grupe.toUpperCase());
 
-            $("#success-alert").fadeTo(3000, 500).slideUp(2000, function(){
-                $("#success-alert").slideUp(2000);
-            });
+
+
+
+
+            // $("#success-alert").fadeTo(3000, 500).slideUp(2000, function(){
+            //     $("#success-alert").slideUp(2000);
+            // });
         });
 
 
