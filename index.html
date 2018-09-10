@@ -607,13 +607,32 @@
 
             //if(newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() === local.toUpperCase()){
 
-                var notify = new Notification("Yra naujų pakeitimų!!!",{
-                    body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase(),
-					icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
-				});
-                notify.onclick = function () {
-					location.href = "https://pakeitimai.github.io";
+
+
+                if(newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() || newPost.destytojas.toUpperCase() ===
+					"Laisvi".toUpperCase()) {
+                    var notify1 = new Notification("Nauji paskaitų pakeitimai!!!", {
+                        body:
+                            newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + "Paskaitos nėra",
+                        icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
+
+                    });
+                    notify1.onclick = function () {
+                        location.href = "https://pakeitimai.github.io";
+                    }
+                }else {
+                    var notify2 = new Notification("Nauji paskaitų pakeitimai!!!", {
+                        body:
+                            newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud.",
+                        icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
+                    });
+                    notify2.onclick = function () {
+                        location.href = "https://pakeitimai.github.io";
+                    }
+
                 }
+
+
 
 
 
