@@ -525,18 +525,17 @@
 
 
 
-<p id="demo"></p>
 
 <script>
     function myFunction() {
         Notification.requestPermission();
-        var person = prompt("Please enter your name", "Harry Potter");
-        if (person != null) {
-            localStorage.setItem("name", person);
-            document.getElementById("demo").innerHTML =
-                "Jus pasirinkote sia grupe"+person;
-        }
-    }
+    //     var person = prompt("Please enter your name", "Harry Potter");
+    //     if (person != null) {
+    //         localStorage.setItem("name", person);
+    //         document.getElementById("demo").innerHTML =
+    //             "Jus pasirinkote sia grupe"+person;
+    //     }
+     }
 </script>
 
 
@@ -602,14 +601,23 @@
 
         dbRefObject.limitToLast(1).on("child_added", function(snapshot, prevChildKey) {
             var newPost = snapshot.val();
-            var local = localStorage.getItem("name");
-            console.log("Nauji duomenys: " + newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase());
+           // var local = localStorage.getItem("name");
+           // console.log("Nauji duomenys: " + newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase());
 
 
-            if(newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() === local.toUpperCase()){
-                var notify = new Notification(local+" GRUPĖS STUDENTAMS");
-				notify.close();
-            }
+            //if(newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() === local.toUpperCase()){
+
+                var notify = new Notification("Yra naujų pakeitimų!!!",{
+                    body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase(),
+					icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
+				});
+                notify.onclick = function () {
+					location.href = "https://pakeitimai.github.io";
+                }
+
+
+
+           // }
             //
             // const v = snapshot.val();
             // console.log(v.grupe.toUpperCase());
