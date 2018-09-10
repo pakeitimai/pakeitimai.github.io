@@ -571,11 +571,7 @@
 </table>
 
 
-<div class="alert alert-success" id="success-alert" style="bottom:0; z-index: 3000; position: fixed; width: 100%;
-font-size: 15pt;">
-	<button type="button" class="close" data-dismiss="alert" style="font-size: 15pt">x</button>
-	<strong>Atnaujinta! </strong>Yra naujų pakeitimų!!!
-</div>
+
 
 
 <script src="firebase.js"></script>
@@ -604,13 +600,15 @@ font-size: 15pt;">
 
 
 
-        dbRefObject.once("child_added", function(snapshot, prevChildKey) {
+        dbRefObject.limitToLast(1).on("child_added", function(snapshot, prevChildKey) {
             var newPost = snapshot.val();
             var local = localStorage.getItem("name");
             console.log("Nauji duomenys: " + newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase());
 
+
             if(newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() === local.toUpperCase()){
-                var notify = new Notification(local.toUpperCase()+" GRUPĖS STUDENTAMS");
+                var notify = new Notification(local+" GRUPĖS STUDENTAMS");
+				notify.close();
             }
             //
             // const v = snapshot.val();
@@ -637,7 +635,7 @@ font-size: 15pt;">
 
            // var local = localStorage.getItem("name");
             //const v = snapshot.val();
-            //console.log(v.grupe.toUpperCase());
+           // console.log(v.grupe.toUpperCase());
 
 
 
