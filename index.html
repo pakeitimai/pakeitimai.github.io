@@ -634,10 +634,13 @@
                 // }
 
                 navigator.serviceWorker.ready.then(function(registration) {
-                                registration.showNotification('Notification with ServiceWorker'+newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud.");
-                            });
-
-                        console.log('Service worker has been registered for scope:'+ reg.scope);
+					const title = "Nauji paskaitų pakeitimai!";
+					const options = {
+					  icon:"https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
+						body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud."
+					};
+					registration.showNotification(title, options);
+                });
 
 
 

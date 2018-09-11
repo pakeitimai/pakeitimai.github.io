@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09317ed5-9c8d-43c4-9b53-f434003129c9" name="Default" comment="saerw">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwabuilder-sw-register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pwabuilder-sw-register.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,22 +18,23 @@
     <session id="-592510788">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="946" />
-          <entry key="js" value="6" />
+          <entry key="html" value="1078" />
+          <entry key="js" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="946" />
-          <entry key="JavaScript" value="6" />
+          <entry key="HTML" value="1078" />
+          <entry key="JavaScript" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -58,17 +59,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="635" column="51" selection-start-line="635" selection-start-column="51" selection-end-line="635" selection-end-column="51" />
+            <state relative-caret-position="236">
+              <caret line="636" column="61" selection-start-line="636" selection-start-column="61" selection-end-line="636" selection-end-column="61" />
               <folding>
                 <element signature="e#4148#5223#0" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1536608484795" expanded="true" signature="8052:8185" ph="..." />
-                <marker date="1536608484795" expanded="true" signature="8226:8242" ph="..." />
-                <marker date="1536608484795" expanded="true" signature="8387:8466" ph="..." />
-                <marker date="1536608484795" expanded="true" signature="8593:8632" ph="..." />
-                <marker date="1536608484795" expanded="true" signature="17379:17398" ph="..." />
-                <marker date="1536608484795" expanded="true" signature="20664:20683" ph="..." />
+                <marker date="1536640441738" expanded="true" signature="8052:8185" ph="..." />
+                <marker date="1536640441738" expanded="true" signature="8226:8242" ph="..." />
+                <marker date="1536640441738" expanded="true" signature="8387:8466" ph="..." />
+                <marker date="1536640441738" expanded="true" signature="8593:8632" ph="..." />
+                <marker date="1536640441738" expanded="true" signature="17611:17630" ph="..." />
+                <marker date="1536640441738" expanded="true" signature="20896:20915" ph="..." />
               </folding>
             </state>
           </provider>
@@ -77,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+            <state relative-caret-position="204">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -87,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -164,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,7 +177,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,7 +235,8 @@
       <workItem from="1534435831569" duration="140000" />
       <workItem from="1534435984137" duration="14000" />
       <workItem from="1536598236953" duration="8951000" />
-      <workItem from="1536607457961" duration="1027000" />
+      <workItem from="1536607457961" duration="1582000" />
+      <workItem from="1536639864867" duration="577000" />
     </task>
     <task id="LOCAL-00001" summary="saerw">
       <created>1534431122568</created>
@@ -292,11 +294,32 @@
       <option name="project" value="LOCAL" />
       <updated>1536608182455</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="saerw">
+      <created>1536608499493</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1536608499493</updated>
+    </task>
+    <task id="LOCAL-00010" summary="saerw">
+      <created>1536608597331</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1536608597331</updated>
+    </task>
+    <task id="LOCAL-00011" summary="saerw">
+      <created>1536608728800</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1536608728800</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15319000" />
+    <option name="totallyTimeSpent" value="16451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -355,6 +378,37 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index_source.html" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="636" column="61" selection-start-line="636" selection-start-column="61" selection-end-line="636" selection-end-column="61" />
+          <folding>
+            <element signature="e#4148#5223#0" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1536640441738" expanded="true" signature="8052:8185" ph="..." />
+            <marker date="1536640441738" expanded="true" signature="8226:8242" ph="..." />
+            <marker date="1536640441738" expanded="true" signature="8387:8466" ph="..." />
+            <marker date="1536640441738" expanded="true" signature="8593:8632" ph="..." />
+            <marker date="1536640441738" expanded="true" signature="17611:17630" ph="..." />
+            <marker date="1536640441738" expanded="true" signature="20896:20915" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13974">
@@ -366,37 +420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14042">
           <caret line="826" column="6" selection-start-line="826" selection-start-column="1" selection-end-line="826" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="635" column="51" selection-start-line="635" selection-start-column="51" selection-end-line="635" selection-end-column="51" />
-          <folding>
-            <element signature="e#4148#5223#0" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1536608484795" expanded="true" signature="8052:8185" ph="..." />
-            <marker date="1536608484795" expanded="true" signature="8226:8242" ph="..." />
-            <marker date="1536608484795" expanded="true" signature="8387:8466" ph="..." />
-            <marker date="1536608484795" expanded="true" signature="8593:8632" ph="..." />
-            <marker date="1536608484795" expanded="true" signature="17379:17398" ph="..." />
-            <marker date="1536608484795" expanded="true" signature="20664:20683" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
