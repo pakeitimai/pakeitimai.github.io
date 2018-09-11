@@ -633,15 +633,29 @@
 				//
                 // }
 
-                navigator.serviceWorker.ready.then(function(registration) {
-					const title = "Nauji paskaitų pakeitimai!";
-					const options = {
-					  icon:"https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-						body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud."
-					};
-					registration.showNotification(title, options);
-                });
 
+
+             if(newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() ||
+				 newPost.destytojas.toUpperCase() === "Laisvi".toUpperCase()) {
+
+                 navigator.serviceWorker.ready.then(function (registration) {
+                     const title = "Nauji paskaitų pakeitimai!";
+                     const options = {
+                         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
+                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud."
+                     };
+                     registration.showNotification(title, options);
+                 });
+             }else{
+                 navigator.serviceWorker.ready.then(function (registration) {
+                     const title = "Nauji paskaitų pakeitimai!";
+                     const options = {
+                         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
+                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", "+ newPost.paskaita+ " Paskaitos nėra"
+                     };
+                     registration.showNotification(title, options);
+                 });
+			 }
 
 
 
