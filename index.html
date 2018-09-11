@@ -650,7 +650,8 @@
                      const title = "Nauji paskaitų pakeitimai!";
                      const options = {
                          icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud."
+                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
+							 " paskaita, " + newPost.auditorija + " aud."
                      };
                      registration.showNotification(title, options);
                  });

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09317ed5-9c8d-43c4-9b53-f434003129c9" name="Default" comment="saerw" />
+    <list default="true" id="09317ed5-9c8d-43c4-9b53-f434003129c9" name="Default" comment="saerw">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwabuilder-sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/pwabuilder-sw.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,23 +19,25 @@
     <session id="-592510788">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1101" />
-          <entry key="js" value="7" />
+          <entry key="html" value="1123" />
+          <entry key="js" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1101" />
-          <entry key="JavaScript" value="7" />
+          <entry key="HTML" value="1123" />
+          <entry key="JavaScript" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -46,27 +52,27 @@
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="ESLintLanguageService" value="1" />
+          <entry key="ESLintLanguageService" value="6" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="653" column="104" selection-start-line="653" selection-start-column="104" selection-end-line="653" selection-end-column="104" />
+            <state relative-caret-position="1790">
+              <caret line="661" lean-forward="true" selection-start-line="661" selection-end-line="661" />
               <folding>
                 <element signature="e#4148#5223#0" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1536641018469" expanded="true" signature="8052:8185" ph="..." />
-                <marker date="1536641018469" expanded="true" signature="8226:8242" ph="..." />
-                <marker date="1536641018469" expanded="true" signature="8387:8466" ph="..." />
-                <marker date="1536641018469" expanded="true" signature="8593:8632" ph="..." />
-                <marker date="1536641018469" expanded="true" signature="18315:18334" ph="..." />
-                <marker date="1536641018469" expanded="true" signature="21600:21619" ph="..." />
+                <marker date="1536693595770" expanded="true" signature="8052:8185" ph="..." />
+                <marker date="1536693595770" expanded="true" signature="8226:8242" ph="..." />
+                <marker date="1536693595770" expanded="true" signature="8387:8466" ph="..." />
+                <marker date="1536693595770" expanded="true" signature="8593:8632" ph="..." />
+                <marker date="1536693595770" expanded="true" signature="18322:18341" ph="..." />
+                <marker date="1536693595770" expanded="true" signature="21607:21626" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,17 +81,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="187">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="393">
+              <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -102,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14042">
-              <caret line="826" column="6" selection-start-line="826" selection-start-column="1" selection-end-line="826" selection-end-column="6" />
+            <state relative-caret-position="13804">
+              <caret line="812" selection-start-line="812" selection-end-line="812" />
             </state>
           </provider>
         </entry>
@@ -133,6 +139,7 @@
         <option value="$PROJECT_DIR$/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/pwabuilder-sw-register.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/pwabuilder-sw.js" />
       </list>
     </option>
   </component>
@@ -234,6 +241,11 @@
       <workItem from="1536598236953" duration="8951000" />
       <workItem from="1536607457961" duration="1582000" />
       <workItem from="1536639864867" duration="1219000" />
+      <workItem from="1536655331788" duration="185000" />
+      <workItem from="1536687029648" duration="777000" />
+      <workItem from="1536689132866" duration="7000" />
+      <workItem from="1536693532385" duration="64000" />
+      <workItem from="1536694144510" duration="1250000" />
     </task>
     <task id="LOCAL-00001" summary="saerw">
       <created>1534431122568</created>
@@ -326,11 +338,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536641044550</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="saerw">
+      <created>1536655477712</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1536655477712</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17093000" />
+    <option name="totallyTimeSpent" value="19376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -391,32 +410,18 @@
     <entry file="file://$PROJECT_DIR$/index_source.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="653" column="104" selection-start-line="653" selection-start-column="104" selection-end-line="653" selection-end-column="104" />
+        <state relative-caret-position="1790">
+          <caret line="661" lean-forward="true" selection-start-line="661" selection-end-line="661" />
           <folding>
             <element signature="e#4148#5223#0" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1536641018469" expanded="true" signature="8052:8185" ph="..." />
-            <marker date="1536641018469" expanded="true" signature="8226:8242" ph="..." />
-            <marker date="1536641018469" expanded="true" signature="8387:8466" ph="..." />
-            <marker date="1536641018469" expanded="true" signature="8593:8632" ph="..." />
-            <marker date="1536641018469" expanded="true" signature="18315:18334" ph="..." />
-            <marker date="1536641018469" expanded="true" signature="21600:21619" ph="..." />
+            <marker date="1536693595770" expanded="true" signature="8052:8185" ph="..." />
+            <marker date="1536693595770" expanded="true" signature="8226:8242" ph="..." />
+            <marker date="1536693595770" expanded="true" signature="8387:8466" ph="..." />
+            <marker date="1536693595770" expanded="true" signature="8593:8632" ph="..." />
+            <marker date="1536693595770" expanded="true" signature="18322:18341" ph="..." />
+            <marker date="1536693595770" expanded="true" signature="21607:21626" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -429,8 +434,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14042">
-          <caret line="826" column="6" selection-start-line="826" selection-start-column="1" selection-end-line="826" selection-end-column="6" />
+        <state relative-caret-position="13804">
+          <caret line="812" selection-start-line="812" selection-end-line="812" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
         </state>
       </provider>
     </entry>
