@@ -637,12 +637,11 @@
 
              if(newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() ||
 				 newPost.destytojas.toUpperCase() === "Laisvi".toUpperCase()) {
-
                  navigator.serviceWorker.ready.then(function (registration) {
                      const title = "Nauji paskaitų pakeitimai!";
                      const options = {
                          icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud."
+                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", "+ newPost.paskaita+ " Paskaitos nėra"
                      };
                      registration.showNotification(title, options);
                  });
@@ -651,7 +650,7 @@
                      const title = "Nauji paskaitų pakeitimai!";
                      const options = {
                          icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", "+ newPost.paskaita+ " Paskaitos nėra"
+                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud."
                      };
                      registration.showNotification(title, options);
                  });
