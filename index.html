@@ -552,17 +552,10 @@
 
 	<tbody>
 	<tr>
-		<td data-label="LAIKAS"><strong>[1] PASKAITA</strong> 7:45-9:15</td>
-		<td data-label="GRUPĖ">PI17A, PI17B, PI17C, PI17D</td>
-		<td data-label="DĖSTYTOJAS">Valdona Judickaite-Zukovske</td>
-		<td data-label="AUDITORIJA">420A</td>
+		<td colspan="4">JUNGIAMASI PRIE SERVERIO...</td>
+
 	</tr>
-	<tr>
-		<td data-label="LAIKAS"><strong>[1] PASKAITA</strong> 7:45-9:15</td>
-		<td data-label="GRUPĖ">PI17A, PI17B, PI17C, PI17D</td>
-		<td data-label="DĖSTYTOJAS">Valdona Judickaite-Zukovske</td>
-		<td data-label="AUDITORIJA">420A</td>
-	</tr>
+
 
 
 
@@ -614,8 +607,7 @@
 
 
 
-
-
+		var ignore_first_time = 0;
 
         dbRefObject.limitToLast(1).on("child_added", function(snapshot, prevChildKey) {
             var newPost = snapshot.val();
@@ -652,33 +644,40 @@
                 // }
 
 
-            let data_notification = moment(newPost.date).locale('lt').format('dddd').toUpperCase();
+			if(ignore_first_time <= 0) {
+
+        		console.log("DATABASE LOADED AND SET TO:"+ignore_first_time);
+        		ignore_first_time = 1;
+
+            }else{
+
+                let data_notification = moment(newPost.date).locale('lt').format('dddd').toUpperCase();
 
 
-             if(newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() ||
-				 newPost.destytojas.toUpperCase() === "Laisvi".toUpperCase()) {
-                 navigator.serviceWorker.ready.then(function (registration) {
-                     const title = "Nauji paskaitų pakeitimai!";
-                     const options = {
-                         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", "+ newPost.paskaita+
-							 " Paskaitos nėra"+"\n"+data_notification
-                     };
-                     registration.showNotification(title, options);
-                 });
-             }else{
-                 navigator.serviceWorker.ready.then(function (registration) {
-                     const title = "Nauji paskaitų pakeitimai!";
-                     const options = {
-                         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-                         body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
-							 " paskaita, " + newPost.auditorija + " aud."+"\n"+data_notification
-                     };
-                     registration.showNotification(title, options);
-                 });
-			 }
+                if (newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() ||
+                    newPost.destytojas.toUpperCase() === "Laisvi".toUpperCase()) {
+                    navigator.serviceWorker.ready.then(function (registration) {
+                        const title = "Nauji paskaitų pakeitimai!";
+                        const options = {
+                            icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
+                            body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
+                                " Paskaitos nėra" + "\n" + data_notification
+                        };
+                        registration.showNotification(title, options);
+                    });
+                } else {
+                    navigator.serviceWorker.ready.then(function (registration) {
+                        const title = "Nauji paskaitų pakeitimai!";
+                        const options = {
+                            icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
+                            body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
+                                " paskaita, " + newPost.auditorija + " aud." + "\n" + data_notification
+                        };
+                        registration.showNotification(title, options);
+                    });
+                }
 
-
+			}
 
 
 
@@ -707,7 +706,7 @@
 
 
 
-        dbRefObject.orderByChild('paskaita').on("child_added", function (snapshot) {
+        //dbRefObject.orderByChild('paskaita').on("child_added", function (snapshot) {
 
            // var local = localStorage.getItem("name");
             //const v = snapshot.val();
@@ -720,7 +719,7 @@
             // $("#success-alert").fadeTo(3000, 500).slideUp(2000, function(){
             //     $("#success-alert").slideUp(2000);
             // });
-        });
+       // });
 
 
 

@@ -4,8 +4,6 @@
     <list default="true" id="09317ed5-9c8d-43c4-9b53-f434003129c9" name="Default" comment="saerw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,29 +29,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1375" />
+          <entry key="html" value="1603" />
           <entry key="js" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1375" />
+          <entry key="HTML" value="1603" />
           <entry key="JavaScript" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="js" value="4" />
+          <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="4" />
+          <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
           <entry key="ESLintLanguageService" value="6" />
+          <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -63,17 +64,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="596" column="46" selection-start-line="596" selection-start-column="46" selection-end-line="596" selection-end-column="46" />
+            <state relative-caret-position="147">
+              <caret line="554" column="59" selection-start-line="554" selection-start-column="59" selection-end-line="554" selection-end-column="59" />
               <folding>
                 <element signature="e#4148#5223#0" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1536768925700" expanded="true" signature="8052:8185" ph="..." />
-                <marker date="1536768925700" expanded="true" signature="8226:8242" ph="..." />
-                <marker date="1536768925700" expanded="true" signature="8387:8466" ph="..." />
-                <marker date="1536768925700" expanded="true" signature="8593:8632" ph="..." />
-                <marker date="1536768925700" expanded="true" signature="19317:19336" ph="..." />
-                <marker date="1536768925700" expanded="true" signature="22602:22621" ph="..." />
+                <marker date="1536771078143" expanded="true" signature="8052:8185" ph="..." />
+                <marker date="1536771078143" expanded="true" signature="8226:8242" ph="..." />
+                <marker date="1536771078143" expanded="true" signature="8387:8466" ph="..." />
+                <marker date="1536771078143" expanded="true" signature="8593:8632" ph="..." />
+                <marker date="1536771078143" expanded="true" signature="19274:19293" ph="..." />
+                <marker date="1536771078143" expanded="true" signature="22559:22578" ph="..." />
               </folding>
             </state>
           </provider>
@@ -131,6 +132,7 @@
       <find>data</find>
       <find>date</find>
       <find>firebase</find>
+      <find>Va</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,6 +212,7 @@
     <property name="node.js.selected.package.eslint" value="C:\Users\Marius\AppData\Roaming\npm\node_modules\eslint" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -262,7 +265,7 @@
       <workItem from="1536693532385" duration="64000" />
       <workItem from="1536694144510" duration="2861000" />
       <workItem from="1536740156390" duration="139000" />
-      <workItem from="1536763901962" duration="3706000" />
+      <workItem from="1536763901962" duration="5746000" />
     </task>
     <task id="LOCAL-00001" summary="saerw">
       <created>1534431122568</created>
@@ -376,11 +379,25 @@
       <option name="project" value="LOCAL" />
       <updated>1536696898271</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="saerw">
+      <created>1536768947630</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1536768947630</updated>
+    </task>
+    <task id="LOCAL-00018" summary="saerw">
+      <created>1536769770915</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1536769770915</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24832000" />
+    <option name="totallyTimeSpent" value="26872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -389,6 +406,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24868283" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49789253" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -474,19 +492,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/lodash/fp.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3614">
+          <caret line="4532" column="8" selection-start-line="4532" selection-start-column="8" selection-end-line="4532" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="596" column="46" selection-start-line="596" selection-start-column="46" selection-end-line="596" selection-end-column="46" />
+        <state relative-caret-position="147">
+          <caret line="554" column="59" selection-start-line="554" selection-start-column="59" selection-end-line="554" selection-end-column="59" />
           <folding>
             <element signature="e#4148#5223#0" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1536768925700" expanded="true" signature="8052:8185" ph="..." />
-            <marker date="1536768925700" expanded="true" signature="8226:8242" ph="..." />
-            <marker date="1536768925700" expanded="true" signature="8387:8466" ph="..." />
-            <marker date="1536768925700" expanded="true" signature="8593:8632" ph="..." />
-            <marker date="1536768925700" expanded="true" signature="19317:19336" ph="..." />
-            <marker date="1536768925700" expanded="true" signature="22602:22621" ph="..." />
+            <marker date="1536771078143" expanded="true" signature="8052:8185" ph="..." />
+            <marker date="1536771078143" expanded="true" signature="8226:8242" ph="..." />
+            <marker date="1536771078143" expanded="true" signature="8387:8466" ph="..." />
+            <marker date="1536771078143" expanded="true" signature="8593:8632" ph="..." />
+            <marker date="1536771078143" expanded="true" signature="19274:19293" ph="..." />
+            <marker date="1536771078143" expanded="true" signature="22559:22578" ph="..." />
           </folding>
         </state>
       </provider>
