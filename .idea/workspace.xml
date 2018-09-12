@@ -4,7 +4,8 @@
     <list default="true" id="09317ed5-9c8d-43c4-9b53-f434003129c9" name="Default" comment="saerw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwabuilder-sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/pwabuilder-sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,35 +20,35 @@
     <session id="-592510788">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1123" />
+          <entry key="html" value="1375" />
           <entry key="js" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1123" />
+          <entry key="HTML" value="1375" />
           <entry key="JavaScript" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="2" />
+          <entry key="js" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="2" />
+          <entry key="JavaScript" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -59,20 +60,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1790">
-              <caret line="661" lean-forward="true" selection-start-line="661" selection-end-line="661" />
+            <state relative-caret-position="295">
+              <caret line="596" column="46" selection-start-line="596" selection-start-column="46" selection-end-line="596" selection-end-column="46" />
               <folding>
                 <element signature="e#4148#5223#0" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1536693595770" expanded="true" signature="8052:8185" ph="..." />
-                <marker date="1536693595770" expanded="true" signature="8226:8242" ph="..." />
-                <marker date="1536693595770" expanded="true" signature="8387:8466" ph="..." />
-                <marker date="1536693595770" expanded="true" signature="8593:8632" ph="..." />
-                <marker date="1536693595770" expanded="true" signature="18322:18341" ph="..." />
-                <marker date="1536693595770" expanded="true" signature="21607:21626" ph="..." />
+                <marker date="1536768925700" expanded="true" signature="8052:8185" ph="..." />
+                <marker date="1536768925700" expanded="true" signature="8226:8242" ph="..." />
+                <marker date="1536768925700" expanded="true" signature="8387:8466" ph="..." />
+                <marker date="1536768925700" expanded="true" signature="8593:8632" ph="..." />
+                <marker date="1536768925700" expanded="true" signature="19317:19336" ph="..." />
+                <marker date="1536768925700" expanded="true" signature="22602:22621" ph="..." />
               </folding>
             </state>
           </provider>
@@ -87,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+            <state relative-caret-position="714">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -127,6 +128,9 @@
     <findStrings>
       <find>media</find>
       <find>success-alert</find>
+      <find>data</find>
+      <find>date</find>
+      <find>firebase</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,8 +142,8 @@
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/pwabuilder-sw-register.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/pwabuilder-sw.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -169,7 +173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,10 +180,22 @@
               <item name="pakeitimai.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="pakeitimai.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pakeitimai.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pakeitimai.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pakeitimai.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pakeitimai.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="firebase-functions" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,7 +260,9 @@
       <workItem from="1536687029648" duration="777000" />
       <workItem from="1536689132866" duration="7000" />
       <workItem from="1536693532385" duration="64000" />
-      <workItem from="1536694144510" duration="1250000" />
+      <workItem from="1536694144510" duration="2861000" />
+      <workItem from="1536740156390" duration="139000" />
+      <workItem from="1536763901962" duration="3706000" />
     </task>
     <task id="LOCAL-00001" summary="saerw">
       <created>1534431122568</created>
@@ -345,17 +362,31 @@
       <option name="project" value="LOCAL" />
       <updated>1536655477712</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="saerw">
+      <created>1536695431780</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1536695431780</updated>
+    </task>
+    <task id="LOCAL-00016" summary="saerw">
+      <created>1536696898271</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1536696898271</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19376000" />
+    <option name="totallyTimeSpent" value="24832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24868283" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24868283" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,9 +396,9 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021075" side_tool="true" visible="true" weight="0.22101842" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49947312" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -408,20 +439,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index_source.html" />
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1790">
-          <caret line="661" lean-forward="true" selection-start-line="661" selection-end-line="661" />
-          <folding>
-            <element signature="e#4148#5223#0" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1536693595770" expanded="true" signature="8052:8185" ph="..." />
-            <marker date="1536693595770" expanded="true" signature="8226:8242" ph="..." />
-            <marker date="1536693595770" expanded="true" signature="8387:8466" ph="..." />
-            <marker date="1536693595770" expanded="true" signature="8593:8632" ph="..." />
-            <marker date="1536693595770" expanded="true" signature="18322:18341" ph="..." />
-            <marker date="1536693595770" expanded="true" signature="21607:21626" ph="..." />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -439,17 +467,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pwabuilder-sw-register.js">
+    <entry file="file://$PROJECT_DIR$/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="213">
+          <caret line="33" column="67762" selection-start-line="33" selection-start-column="67762" selection-end-line="33" selection-end-column="67762" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pwabuilder-sw.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+        <state relative-caret-position="295">
+          <caret line="596" column="46" selection-start-line="596" selection-start-column="46" selection-end-line="596" selection-end-column="46" />
+          <folding>
+            <element signature="e#4148#5223#0" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1536768925700" expanded="true" signature="8052:8185" ph="..." />
+            <marker date="1536768925700" expanded="true" signature="8226:8242" ph="..." />
+            <marker date="1536768925700" expanded="true" signature="8387:8466" ph="..." />
+            <marker date="1536768925700" expanded="true" signature="8593:8632" ph="..." />
+            <marker date="1536768925700" expanded="true" signature="19317:19336" ph="..." />
+            <marker date="1536768925700" expanded="true" signature="22602:22621" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

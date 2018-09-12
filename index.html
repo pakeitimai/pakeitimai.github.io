@@ -574,7 +574,7 @@
 
 
 <script src="firebase.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-functions.js"></script>
 
 <script>
     // Firbease Init
@@ -589,11 +589,27 @@
     firebase.initializeApp(config);
 
 
+    exports.makeUppercase = functions.database.ref('/user-posts/')
+        .onCreate((snapshot, context) => {
+            // Grab the current value of what was written to the Realtime Database.
+            const original = snapshot.val();
+            console.log('Uppercasing', context.params.pushId, original);
+            alert('HELLO OBJECT WAS CREATED');
+            const uppercase = original.toUpperCase();
+            // You must return a Promise when performing asynchronous tasks inside a Functions such as
+            // writing to the Firebase Realtime Database.
+            // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
+            return snapshot.ref.parent.child('uppercase').set(uppercase);
+        });
+
+
+
     function getChangesByDate() {
 
         const dbRefObject = firebase.database().ref("user-posts/");
 
         const pakeitimaiDiv = document.getElementById("pakeitimai");
+
 
 
 
