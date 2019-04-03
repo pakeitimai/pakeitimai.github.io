@@ -27,8 +27,8 @@
 		let h = today.getHours();
 		let m = today.getMinutes();
 		let s = today.getSeconds();
-		m = checkTime(m);
-		s = checkTime(s);
+		//m = checkTime(m);
+		//s = checkTime(s);
 
 		//let timeInminutes = Number(h * 60) + Number(m);
 		// console.log(timeInminutes);
@@ -36,36 +36,47 @@
 		let siandien = moment();
 		siandien.locale('lt');
 		$('#txt').html(siandien.format('YYYY MM DD, dddd,').toUpperCase() + '<span id="kelinta_savaite"> 2 SAVAITĖ</span>');
+
+
+
+		Date.prototype.getWeek = function () {
+			var target  = new Date(this.valueOf());
+			var dayNr   = (this.getDay() + 6) % 7;
+			target.setDate(target.getDate() - dayNr + 3);
+			var firstThursday = target.valueOf();
+			target.setMonth(0, 1);
+			if (target.getDay() != 4) {
+				target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+			}
+			return 1 + Math.ceil((firstThursday - target) / 604800000);
+		};
+
+		const laikas_data =  new Date();
+		const kelinta = laikas_data.getWeek()+1;
+
+		console.log(kelinta);
+		console.log(kelinta % 2 === 1);
+
+		if(kelinta % 2 === 1){
+			$("#kelinta_savaite").text(" 1 SAVAITĖ");
+		}else{
+			$("#kelinta_savaite").text(" 2 SAVAITĖ");
+		}
+
+	//alert(d.getWeek()+1);
+
+
+
+
+
+
+
+
+
+	}
 		//document.getElementById('txt').innerHTML =+ "GEGUŽĖ 2018, TREČIADIENIS," +h + ":" + m + ":" + s;
 
-		if (h === 0 && m === 0 && s >= 55) {
-			location.reload();
-			let sessionsRef = firebase.database().ref("user-posts/sessions");
-			sessionsRef.set({
-				startedAt: firebase.database.ServerValue.TIMESTAMP
-			});
-			//window.location.reload(true);
-		}
 
-		if (h === 5 && m === 58 && s >= 50) {
-			location.reload();
-			let sessionsRef = firebase.database().ref("user-posts/sessions");
-			sessionsRef.set({
-				startedAt: firebase.database.ServerValue.TIMESTAMP
-			});
-
-		}
-
-		let t = setTimeout(startTime, 500);
-
-	}
-
-	function checkTime(i) {
-		if (i < 10) {
-			i = "0" + i
-		} // add zero in front of numbers < 10
-		return i;
-	}
 
 
 	</script>
@@ -873,32 +884,6 @@ font-weight: bold; width: 100%; text-align: center;">
 
 
 
-		<script>
-
-			Date.prototype.getWeek = function () {
-				var target  = new Date(this.valueOf());
-				var dayNr   = (this.getDay() + 6) % 7;
-				target.setDate(target.getDate() - dayNr + 3);
-				var firstThursday = target.valueOf();
-				target.setMonth(0, 1);
-				if (target.getDay() != 4) {
-					target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
-				}
-				return 1 + Math.ceil((firstThursday - target) / 604800000);
-			};
-
-			let d= new Date();
-			let kelinta = d.getWeek() + 1;
-
-
-			if(kelinta % 2 === 1){
-				$("#kelinta_savaite").text(", 1 SAVAITĖ");
-			}else{
-				$("#kelinta_savaite").text(", 2 SAVAITĖ");
-			}
-
-			//alert(d.getWeek()+1);
-		</script>
 
 
 

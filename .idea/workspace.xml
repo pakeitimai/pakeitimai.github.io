@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09317ed5-9c8d-43c4-9b53-f434003129c9" name="Default" comment="saerw">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="09317ed5-9c8d-43c4-9b53-f434003129c9" name="Default" comment="Style Update">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,10 +21,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="858" column="51" selection-start-line="858" selection-start-column="50" selection-end-line="858" selection-end-column="51" />
+            <state relative-caret-position="357">
+              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
               <folding>
-                <element signature="e#4148#5223#0" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
@@ -99,6 +99,10 @@
       <find>footer</find>
       <find>font</find>
       <find>pasi</find>
+      <find>font-size</find>
+      <find>d</find>
+      <find>dd</find>
+      <find>kelinta_savaite</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,7 +130,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,15 +137,11 @@
               <item name="pakeitimai.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="pakeitimai.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pakeitimai.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pakeitimai.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -152,11 +151,12 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.eslint" value="node" />
+    <property name="node.js.path.for.package.standard" value="node" />
     <property name="node.js.selected.package.eslint" value="C:\Users\Marius\AppData\Roaming\npm\node_modules\eslint" />
-    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.standard" value="C:\Users\Marius\AppData\Roaming\npm\node_modules\eslint" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -211,7 +211,8 @@
       <workItem from="1536694144510" duration="2861000" />
       <workItem from="1536740156390" duration="139000" />
       <workItem from="1536763901962" duration="5746000" />
-      <workItem from="1554278225063" duration="5499000" />
+      <workItem from="1554278225063" duration="6041000" />
+      <workItem from="1554323009762" duration="743000" />
     </task>
     <task id="LOCAL-00001" summary="saerw">
       <created>1534431122568</created>
@@ -339,29 +340,43 @@
       <option name="project" value="LOCAL" />
       <updated>1536769770915</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Style Update">
+      <created>1554284036219</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1554284036219</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Style Update">
+      <created>1554284296613</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1554284296613</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32371000" />
+    <option name="totallyTimeSpent" value="33656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24868283" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24868283" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49789253" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50105375" side_tool="true" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49894625" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49841937" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -374,7 +389,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="saerw" />
-    <option name="LAST_COMMIT_MESSAGE" value="saerw" />
+    <MESSAGE value="Style Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style Update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/jquery-ui.min.js">
@@ -410,10 +426,9 @@
     <entry file="file://$PROJECT_DIR$/node_modules/@types/lodash/fp.d.ts" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="858" column="51" selection-start-line="858" selection-start-column="50" selection-end-line="858" selection-end-column="51" />
+        <state relative-caret-position="357">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
           <folding>
-            <element signature="e#4148#5223#0" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
