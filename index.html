@@ -39,29 +39,7 @@
 
 
 
-		Date.prototype.getWeek = function () {
-			var target  = new Date(this.valueOf());
-			var dayNr   = (this.getDay() + 6) % 7;
-			target.setDate(target.getDate() - dayNr + 3);
-			var firstThursday = target.valueOf();
-			target.setMonth(0, 1);
-			if (target.getDay() != 4) {
-				target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
-			}
-			return 1 + Math.ceil((firstThursday - target) / 604800000);
-		};
-
-		const laikas_data =  new Date();
-		const kelinta = laikas_data.getWeek()+1;
-
-		console.log(kelinta);
-		console.log(kelinta % 2 === 1);
-
-		if(kelinta % 2 === 1){
-			$("#kelinta_savaite").text(" 1 SAVAITĖ");
-		}else{
-			$("#kelinta_savaite").text(" 2 SAVAITĖ");
-		}
+		
 
 	//alert(d.getWeek()+1);
 
@@ -590,7 +568,32 @@
 	};
 	firebase.initializeApp(config);
 
+Date.prototype.getWeek = function () {
+			var target  = new Date(this.valueOf());
+			var dayNr   = (this.getDay() + 6) % 7;
+			target.setDate(target.getDate() - dayNr + 3);
+			var firstThursday = target.valueOf();
+			target.setMonth(0, 1);
+			if (target.getDay() != 4) {
+				target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+			}
+			return 1 + Math.ceil((firstThursday - target) / 604800000);
+		};
 
+		  const savaitesDienaIsDB = firebase.database().ref("savaite/");
+            savaitesDienaIsDB.on("value", function (snapshot) {
+
+                let d = new Date();
+                let kelinta = d.getWeek()+snapshot.val();
+                if (kelinta % 2 === 1) {
+                    $("#kelinta_savaite").text(" 1 SAVAITĖ");
+                } else {
+                    $("#kelinta_savaite").text(" 2 SAVAITĖ");
+                }
+                //console.log(snapshot.val());
+                //kelinta = d.getWeek() + snapshot.val();
+                //console.log(kelinta);
+            });
 
 	// functions.
 	// functions.database.ref('/user-posts/')
