@@ -1,48 +1,43 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
-<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
+<html>
+
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>VK EIF PAKEITIMAI</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- stylesheet for demo and examples -->
-	<meta name="theme-color" content="blue">
-	<meta name="description" content="VK EIF kolegijos laikinieji pakeitimai">
 
-	<link rel="stylesheet" href="bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
-		  integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-	<link rel="manifest" href="/manifest.json">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>VK EIF PAKEITIMAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- stylesheet for demo and examples -->
+    <meta name="theme-color" content="blue">
+    <meta name="description" content="VK EIF kolegijos laikinieji pakeitimai">
 
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+          integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="manifest" href="/manifest.json">
 
 
-	<!-- custom scrollbar stylesheet -->
-	<script>function startTime() {
+    <script>function startTime() {
 
-		let today = new Date();
-		let h = today.getHours();
-		let m = today.getMinutes();
-		let s = today.getSeconds();
-		//m = checkTime(m);
-		//s = checkTime(s);
+        let today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        //m = checkTime(m);
+        //s = checkTime(s);
 
-		//let timeInminutes = Number(h * 60) + Number(m);
-		// console.log(timeInminutes);
+        //let timeInminutes = Number(h * 60) + Number(m);
+        // console.log(timeInminutes);
 
-		let siandien = moment();
-		siandien.locale('lt');
-		$('#txt').html(siandien.format('YYYY MM DD, dddd,').toUpperCase() + '<span id="kelinta_savaite"> 2 SAVAITĖ</span>');
+        let siandien = moment();
+        siandien.locale('lt');
+        $('#txt').html(siandien.format('YYYY MM DD, dddd,').toUpperCase() + '<span id="kelinta_savaite"> 2 SAVAITĖ</span>');
 
 
 
-		
 
-	//alert(d.getWeek()+1);
 
+        //alert(d.getWeek()+1);
 
 
 
@@ -51,315 +46,430 @@
 
 
 
-	}
-		//document.getElementById('txt').innerHTML =+ "GEGUŽĖ 2018, TREČIADIENIS," +h + ":" + m + ":" + s;
 
+    }
+    //document.getElementById('txt').innerHTML =+ "GEGUŽĖ 2018, TREČIADIENIS," +h + ":" + m + ":" + s;
 
 
 
-	</script>
 
-	<style>
+    </script>
 
-		table {
-			/*border: 1px solid #ccc;*/
-			border-collapse: collapse;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			font-size: 20pt;
-			table-layout: fixed;
-		}
+    <style>
 
-		table caption {
-			font-size: 1.5em;
-			margin: .5em 0 .75em;
-		}
+        table {
+            /*border: 1px solid #ccc;*/
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-size: 20pt;
+            table-layout: fixed;
+        }
 
-		table tr {
-			background-color: #cccccc;
-			/*border: 1px solid #ddd;*/
-			/*padding: .35em;*/
-		}
+        table caption {
+            font-size: 1.5em;
+            margin: .5em 0 .75em;
+        }
 
-		table th,
-		table td {
-			padding: .625em;
-			text-align: center;
-			border-bottom: 1px solid #6c757d!important;
-		}
+        table tr {
+            background-color: #cccccc;
+            /*border: 1px solid #ddd;*/
+            /*padding: .35em;*/
+        }
 
-		table th {
-			/*font-size: .85em;*/
-			letter-spacing: .1em;
-			text-transform: uppercase;
-		}
+        table th,
+        table td {
+            padding: .625em;
+            text-align: center;
+            border-bottom: 1px solid #6c757d!important;
+        }
 
-		/*@media screen and (max-width: 680px) {*/
-		/*table {*/
-		/*border: 0;*/
-		/*font-size: 12pt;*/
+        table th {
+            /*font-size: .85em;*/
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
 
-		/*}*/
-		/*table caption {*/
-		/*font-size: 1.3em;*/
-		/*}*/
+        /*@media screen and (max-width: 680px) {*/
+        /*table {*/
+        /*border: 0;*/
+        /*font-size: 12pt;*/
 
-		/*table thead {*/
-		/*border: none;*/
-		/*clip: rect(0 0 0 0);*/
-		/*height: 1px;*/
-		/*margin: -1px;*/
-		/*overflow: hidden;*/
-		/*padding: 0;*/
-		/*position: absolute;*/
-		/*width: 1px;*/
-		/*}*/
-
-		/*table tr {*/
-		/*!*border-bottom: 3px solid #ddd;*!*/
-		/*display: block;*/
-		/*margin-bottom: .625em;*/
-		/*}*/
-
-		/*table td {*/
-		/*!*border-bottom: 1px solid #ddd;*!*/
-		/*display: block;*/
-		/*!*font-size: .8em;*!*/
-		/*!*text-align: right;*!*/
-		/*}*/
-
-		/*table td::before {*/
-		/*!**/
-		/** aria-label has no advantage, it won't be read inside a table*/
-		/*content: attr(aria-label);*/
-		/**!*/
-		/*content: attr(data-label);*/
-		/*float: left;*/
-		/*font-weight: bold;*/
-		/*text-transform: uppercase;*/
-		/*}*/
-
-		/*table td:last-child {*/
-		/*border-bottom: 0;*/
-		/*}*/
-		/*.table-striped > tbody > tr:nth-child(odd) > td,*/
-		/*.table-striped > tbody > tr:nth-child(odd) > th {*/
-		/*background-color: #607d8b!important;*/
-		/*color:white;*/
-		/*font-weight: bold;*/
-		/*/ / Choose your own color here*/
-		/*}*/
-		/*}*/
+        /*}*/
+        /*table caption {*/
+        /*font-size: 1.3em;*/
+        /*}*/
 
+        /*table thead {*/
+        /*border: none;*/
+        /*clip: rect(0 0 0 0);*/
+        /*height: 1px;*/
+        /*margin: -1px;*/
+        /*overflow: hidden;*/
+        /*padding: 0;*/
+        /*position: absolute;*/
+        /*width: 1px;*/
+        /*}*/
+
+        /*table tr {*/
+        /*!*border-bottom: 3px solid #ddd;*!*/
+        /*display: block;*/
+        /*margin-bottom: .625em;*/
+        /*}*/
+
+        /*table td {*/
+        /*!*border-bottom: 1px solid #ddd;*!*/
+        /*display: block;*/
+        /*!*font-size: .8em;*!*/
+        /*!*text-align: right;*!*/
+        /*}*/
+
+        /*table td::before {*/
+        /*!**/
+        /** aria-label has no advantage, it won't be read inside a table*/
+        /*content: attr(aria-label);*/
+        /**!*/
+        /*content: attr(data-label);*/
+        /*float: left;*/
+        /*font-weight: bold;*/
+        /*text-transform: uppercase;*/
+        /*}*/
+
+        /*table td:last-child {*/
+        /*border-bottom: 0;*/
+        /*}*/
+        /*.table-striped > tbody > tr:nth-child(odd) > td,*/
+        /*.table-striped > tbody > tr:nth-child(odd) > th {*/
+        /*background-color: #607d8b!important;*/
+        /*color:white;*/
+        /*font-weight: bold;*/
+        /*/ / Choose your own color here*/
+        /*}*/
+        /*}*/
 
 
 
-		p.active {
-			background-color: #e91e63;
-			color: white;
-		}
-
-
-
-		table tbody{
-			background-color: #ffeb3b78;
-		}
-
-
-
-
-		@media screen and (max-width: 800px) {
-			::-webkit-scrollbar {
-				width: 1px;
-				height: 1px;
-			}
-
-			table tr, td {
-				font-size: 0.6em;
-			}
-			table th{
-				font-size:0.5em;
-			}
-
-
-			::-webkit-scrollbar-button {
-				width: 10px;
-				height: 10px;
-				background-color: #0092ef;
-			}
-			footer{
-				font-size:1em!important;
-
-			}
-			.horizontal-scroll-wrapper {max-height: 450px!important;
-				z-index: 2000;
-
-				position: fixed;
-				display: block;
-				top: 0;
-				left: 0;
-				width: calc(150px + 1px)!important;
-				margin: 0;
-				padding-top: 1px;
-				/*background: #0092ef;*/
-				overflow-y: auto;
-				overflow-x: hidden;
-				-webkit-transform: rotate(-90deg) translateY(-150px)!important;
-				transform: rotate(-90deg) translateY(-150px)!important;
-				-webkit-transform-origin: right top;
-				transform-origin: right top;
-
-
-
-			}
-
-			.squares {
-				padding: 150px 0 0 0!important;
-			}
-			.squares > div {
-				width: 150px!important;
-				height: 150px!important;
-				margin: 10px 0;
-			}
-
-			#virsutinis_menu{
-				background:#00308f!important;
-			}
-
-
-
-
-
-
-
-		}
-
-		body{
-			background-color: whitesmoke;
-			font-family: "Verdana", Geneva, sans-serif;
-			overscroll-behavior-y: contain;
-		}
-		div {
-			box-sizing: border-box;
-		}
-
-
-
-
-
-		.horizontal-scroll-wrapper {
-			z-index: 2000;
-			position: fixed;
-			display: block;
-			top: 0;
-			left: 0;
-			width: calc(150px + 1px);
-			max-height: 2500px;
-			margin: 0;
-			padding-top: 1px;
-			/*background: #0092ef;*/
-			overflow-y: auto;
-			overflow-x: hidden;
-			-webkit-transform: rotate(-90deg) translateY(-150px);
-			transform: rotate(-90deg) translateY(-150px);
-			-webkit-transform-origin: right top;
-			transform-origin: right top;
-		}
-		.horizontal-scroll-wrapper > div {
-			display: block;
-			padding: 5px;
-			-webkit-transform: rotate(90deg);
-			transform: rotate(90deg);
-			-webkit-transform-origin: right top;
-			transform-origin: right top;
-		}
-
-		.squares {
-			padding: 150px 0 0 0;
-		}
-		.squares > div {
-			width: 150px;
-			height: 150px;
-			margin: 10px 0;
-		}
-
-		.table-dark th {
-			background-color: #0062cc !important;
-			color: white!important;
-
-		}
-		.table-dark td{
-			border-top: none;
-		}
-
-		.table-striped > tbody > tr:nth-child(odd) > td,
-		.table-striped > tbody > tr:nth-child(odd) > th {
-			background-color: whitesmoke;
-			color:#5a6268;
-
-		}
-
-		.table-dark {
-
-			background-color: whitesmoke;
-		}
-
-		.table-striped > tbody > tr:nth-child(even) > td,
-		.table-striped > tbody > tr:nth-child(even) > th {
-			background-color: white;
-			color: #6c757d;
-
-		}
-
-
-		* {
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: -moz-none;
-			-o-user-select: none;
-			user-select: none;
-		}
-
-		::-webkit-scrollbar
-		{
-			width: 5px;  /* for vertical scrollbars */
-			height: 5px; /* for horizontal scrollbars */
-		}
-
-		::-webkit-scrollbar-track
-		{
-			background: rgba(0, 0, 0, 0.1);
-		}
-
-		::-webkit-scrollbar-thumb
-		{
-			background: rgba(0, 0, 0, 0.5);
-		}
-
-	</style>
+
+        p.active {
+            background-color: #e91e63;
+            color: white;
+        }
+
+
+
+        table tbody{
+            background-color: #ffeb3b78;
+        }
+
+
+
+
+        @media screen and (max-width: 800px) {
+            ::-webkit-scrollbar {
+                width: 1px;
+                height: 1px;
+            }
+
+            table tr, td {
+                font-size: 0.6em;
+            }
+            table th{
+                font-size:0.5em;
+            }
+
+
+            ::-webkit-scrollbar-button {
+                width: 10px;
+                height: 10px;
+                background-color: #0092ef;
+            }
+            footer{
+                font-size:1em!important;
+
+            }
+            .horizontal-scroll-wrapper {max-height: 450px!important;
+                z-index: 2000;
+
+                position: fixed;
+                display: block;
+                top: 0;
+                left: 0;
+                width: calc(150px + 1px)!important;
+                margin: 0;
+                padding-top: 1px;
+                /*background: #0092ef;*/
+                overflow-y: auto;
+                overflow-x: hidden;
+                -webkit-transform: rotate(-90deg) translateY(-150px)!important;
+                transform: rotate(-90deg) translateY(-150px)!important;
+                -webkit-transform-origin: right top;
+                transform-origin: right top;
+
+
+
+            }
+
+            .squares {
+                padding: 150px 0 0 0!important;
+            }
+            .squares > div {
+                width: 150px!important;
+                height: 150px!important;
+                margin: 10px 0;
+            }
+
+            #virsutinis_menu{
+                background:#00308f!important;
+            }
+
+
+
+
+
+
+
+        }
+
+        body{
+            background-color: whitesmoke;
+            font-family: "Verdana", Geneva, sans-serif;
+            overscroll-behavior-y: contain;
+        }
+        div {
+            box-sizing: border-box;
+        }
+
+
+
+
+
+        .horizontal-scroll-wrapper {
+            z-index: 2000;
+            position: fixed;
+            display: block;
+            top: 0;
+            left: 0;
+            width: calc(150px + 1px);
+            max-height: 2500px;
+            margin: 0;
+            padding-top: 1px;
+            /*background: #0092ef;*/
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-transform: rotate(-90deg) translateY(-150px);
+            transform: rotate(-90deg) translateY(-150px);
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+        }
+        .horizontal-scroll-wrapper > div {
+            display: block;
+            padding: 5px;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+        }
+
+        .squares {
+            padding: 150px 0 0 0;
+        }
+        .squares > div {
+            width: 150px;
+            height: 150px;
+            margin: 10px 0;
+        }
+
+        .table-dark th {
+            background-color: #0062cc !important;
+            color: white!important;
+
+        }
+        .table-dark td{
+            border-top: none;
+        }
+
+        .table-striped > tbody > tr:nth-child(odd) > td,
+        .table-striped > tbody > tr:nth-child(odd) > th {
+            background-color: whitesmoke;
+            color:#5a6268;
+
+        }
+
+        .table-dark {
+
+            background-color: whitesmoke;
+        }
+
+        .table-striped > tbody > tr:nth-child(even) > td,
+        .table-striped > tbody > tr:nth-child(even) > th {
+            background-color: white;
+            color: #6c757d;
+
+        }
+
+
+        * {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: -moz-none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        ::-webkit-scrollbar
+        {
+            width: 5px;  /* for vertical scrollbars */
+            height: 5px; /* for horizontal scrollbars */
+        }
+
+        ::-webkit-scrollbar-track
+        {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb
+        {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="moment/min/moment-with-locales.min.js"></script>
+
+
+
+
+
+    <script>
+        firebase.initializeApp({
+
+            apiKey: "AIzaSyCRYVIHl_orktaBMwsmlQtMcOaeGO0FTQI",
+            authDomain: "eif-courses.firebaseapp.com",
+            databaseURL: "https://eif-courses.firebaseio.com",
+            projectId: "eif-courses",
+            storageBucket: "eif-courses.appspot.com",
+            messagingSenderId: "535363326769",
+            appId: "1:535363326769:web:cc13dce33cff5884925610"
+
+            // apiKey: "AIzaSyBfMIcfL3ixMfvsSLIiWicN24AK3NeOaMI",
+            // authDomain: "student-bcfa2.firebaseapp.com",
+            // databaseURL: "https://student-bcfa2.firebaseio.com",
+            // projectId: "student-bcfa2",
+            // storageBucket: "student-bcfa2.appspot.com",
+            // messagingSenderId: "762197849555",
+            // appId: "1:762197849555:web:fbdbbf423c11120a71ab26",
+            // measurementId: "G-ERRK6PSZ4G"
+        })
+        const messaging = firebase.messaging();
+        const db = firebase.database();
+        function initFirebaseMessagingRegistration() {
+            messaging
+                .requestPermission()
+                .then(function () {
+                    //messageElement.innerHTML = "Got notification permission";
+                    console.log("Got notification permission");
+                    return messaging.getToken();
+                })
+                .then(function (token) {
+
+
+
+                 //   initFirebaseMessagingRegistration(grupe);
+
+                    let user =  {
+                        grupe:  $("#grupeSuscribe").val().toUpperCase(),
+                        tokenas : token
+                    }
+                            // User is signed in.
+                    localStorage.setItem('user', JSON.stringify(user));
+
+                    let temp = JSON.parse(localStorage.getItem('user'));
+
+                    db.ref('tokenas/'+temp.tokenas).set({
+                        data: 3000,
+                        grupe: temp.grupe,
+                        tokenas: temp.tokenas
+                    });
+                    alert('Sėkmingai užregistravote - > Informuosime pranešimais!')
+
+
+                    // print the token on the HTML page
+                   // tokenElement.innerHTML = "Token is " + token;
+                })
+                .catch(function (err) {
+                    console.log("Didn't get notification permission", err);
+                });
+
+
+            //temp.prop1; // gives "string"
+
+        }
+
+
+        messaging.onMessage(function (payload) {
+            console.log("Message received. ", JSON.stringify(payload));
+        //    notificationElement.innerHTML = notificationElement.innerHTML + " " + payload.data.notification;
+            alert('notification arrived'+payload.data.notification.title)
+        });
+        messaging.onTokenRefresh(function () {
+            messaging.getToken()
+                .then(function (refreshedToken) {
+                    console.log('Token refreshed.');
+                 //   tokenElement.innerHTML = "Token is " + refreshedToken;
+                }).catch(function (err) {
+                   // errorElement.innerHTML = "Error: " + err;
+                    console.log('Unable to retrieve refreshed token ', err);
+                });
+        });
+
+
+
+
+
+    </script>
 
 </head>
 
-<body onload="startTime(), myFunction()">
-
-
-
-
+<body onload="startTime(); pasirinktaGrupe()">
 
 
 
 
 
 <div style="position: fixed;  background: #9e9e9e; min-height: 151px; width: 100%; top:0"></div>
+
+
+<div class="input-group mb-3" style="top:154px; width: 320px; position:fixed;">
+    <input id="grupeSuscribe" type="text" class="form-control" placeholder="Nurodykite grupę:">
+    <div class="input-group-append">
+        <button class="btn btn-danger" type="button" onclick="initFirebaseMessagingRegistration()"><i class="far fa-bell"></i> Prenumeruoti</button>
+    </div>
+</div>
+
+
+
+
 <div class="horizontal-scroll-wrapper squares ">
 
 </div>
 
 
 
-<script src="js/jquery.min.js"></script>
-<script src="moment/min/moment-with-locales.min.js"></script>
+
+<script>
+    function pasirinktaGrupe(){
+        let testas = JSON.parse(localStorage.getItem('user'));
+        $('#grupeSuscribe').val(testas.grupe)
+    }
+</script>
+
+
 <script>
 
 
@@ -367,162 +477,95 @@
 
 
 
-	let date = moment(new Date()),
-			begin = moment(date).isoWeekday(1);
+    let date = moment(new Date()),
+        begin = moment(date).isoWeekday(1);
 
-	begin.startOf('iweek');
-	begin.locale('lt');
+    begin.startOf('iweek');
+    begin.locale('lt');
 
-	let today = moment();
-	today.locale('lt');
+    let today = moment();
+    today.locale('lt');
 
-	let past_day = Number(today.format('DD') - 1);
+    let past_day = Number(today.format('DD') - 1);
 
-	// EIF LOGOTIPAS
-	//  $('div.horizontal-scroll-wrapper').append('<div style=""></div>');
+    // EIF LOGOTIPAS
+    //  $('div.horizontal-scroll-wrapper').append('<div style=""></div>');
 
 
-	for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 18; i++) {
 
-		$(".horizontal-scroll-wrapper").append('<div id="' + begin.format('DD') + '"' +
-				'style="background-color: white; color:black; align-items: center;   \n' +
-				'                 border:1px solid gray; padding: 5px;">\n' +
-				'          <p style="font-size: 45pt;" align="center" id="pid' + begin.format('DD') +
-				'">' +
-				begin.format('DD') + '</p>\n' +
-				'          <p style="font-weight: bold; padding:5px; font-size: 8pt; color:black; margin-top: -22px;" align="center">' +
-				moment(begin).locale('lt').format('dddd').toUpperCase() + '</p>\n' +
-				'<div style="font-size: 10pt;     margin-top: -25px;" align="center" id="stateid' +
-				begin.format('DD') +
-				'">' +
-				begin.format('MMMM', 'lt').toUpperCase() + '</div>' +
-				'        </div>');
+        $(".horizontal-scroll-wrapper").append('<div id="' + begin.format('DD') + '"' +
+            'style="background-color: white; color:black; align-items: center;   \n' +
+            '                 border:1px solid gray; padding: 5px;">\n' +
+            '          <p style="font-size: 45pt;" align="center" id="pid' + begin.format('DD') +
+            '">' +
+            begin.format('DD') + '</p>\n' +
+            '          <p style="font-weight: bold; padding:5px; font-size: 8pt; color:black; margin-top: -22px;" align="center">' +
+            moment(begin).locale('lt').format('dddd').toUpperCase() + '</p>\n' +
+            '<div style="font-size: 10pt;     margin-top: -25px;" align="center" id="stateid' +
+            begin.format('DD') +
+            '">' +
+            begin.format('MMMM', 'lt').toUpperCase() + '</div>' +
+            '        </div>');
 
-		if (i === 5 || i === 6) {
-			console.log(begin.format('DD'));
-			$("#" + begin.format('DD')).hide();
-		}
-		// Kalendoriaus elementu krastai
+        if (i === 5 || i === 6) {
+            console.log(begin.format('DD'));
+            $("#" + begin.format('DD')).hide();
+        }
+        // Kalendoriaus elementu krastai
 //                $('p#pid' + begin.format('DD')).css({'border': '1px solid grey', "padding":"0",
 //                    "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
-		$('div#' + begin.format('DD')).css({'border-right': '2px solid grey'});
-		$('p#pid' + begin.format('DD')).css({'border': '2px solid grey', "padding":"10px",
-			"box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
+        $('div#' + begin.format('DD')).css({'border-right': '2px solid grey'});
+        $('p#pid' + begin.format('DD')).css({'border': '2px solid grey', "padding":"10px",
+            "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
 
-		// -moz-box-sizing: border-box;
-		//-webkit-box-sizing: border-box;
-		begin.add(1, 'd');
+        // -moz-box-sizing: border-box;
+        //-webkit-box-sizing: border-box;
+        begin.add(1, 'd');
 
-	}
+    }
 
-	for (let k = 1; k < 10; k++) {
-		$('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
-			"color": "grey"});
-		if($('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
-			"color": "grey"})){
+    for (let k = 1; k < 10; k++) {
+        $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+            "color": "grey"});
+        if($('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+            "color": "grey"})){
 
-			$('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
-				"color": "grey"}).remove();
+            $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
+                "color": "grey"}).remove();
 
-			//alert('PRAEJUSI DIENA');
-		}
+            //alert('PRAEJUSI DIENA');
+        }
 
-	}
+    }
 
-	// $('div#' + today.format('DD')).css({'border': '7px solid black', "border-radius":"20px"});
-
-
-
-
-	$('p#pid' + today.format('DD')).css({'border': '2px solid #e91e63',"box-sizing": "border-box",
-		"-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
-
-	$('p#pid' + today.format('DD')).addClass('active');
-
-	let siandien = moment();
-
-	$('p#pasirinkta_diena').text('' + siandien.format('DD'));
-
-	$('.horizontal-scroll-wrapper p:nth-child(odd)').click(function (e) {
-		let diena = $(e.target).text();
-		$('p#pasirinkta_diena').text(diena);
-
-		if ($(e.target).css('color') === 'rgb(128, 128, 128)') {
-			console.log('Praėjusi diena.');
-		} else {
-			$('p.active').removeClass('active'); //Clear all checked class on .size
-			$('p#pid' + diena).addClass('active'); //Add checked class to current clicked .size
-			console.log(diena.toString());
-			readAndDisplayData(diena.toString());
-		}
-	});
-</script>
-
-
-
-<!--<div class="container" style="float: left; width: 100%; margin-top: 0px; ">-->
-
-<!--<table class="table table-dark table-striped" id="pakeitimai">-->
-<!--<thead>-->
-<!--<tr>-->
-<!--<th>Paskaita</th>-->
-<!--<th>Grupė</th>-->
-<!--<th>Dėstytojas</th>-->
-<!--<th>Auditorija</th>-->
-<!--</tr>-->
-<!--</thead>-->
-<!--<tbody>-->
-<!--<tr>-->
-<!--<td>[1] 7<sup>45</sup> - 9<sup>30</sup></td>-->
-<!--<td>PI17A [1 pogr.]</td>-->
-<!--<td>Marius Gžegoževskis</td>-->
-<!--<td>420a</td>-->
-<!--</tr>-->
-
-<!--</tbody>-->
-<!--</table>-->
-<!--</div>-->
-
-<!--END DESTYTOJU PAKEITIMU SARASAS-->
+    // $('div#' + today.format('DD')).css({'border': '7px solid black', "border-radius":"20px"});
 
 
 
 
+    $('p#pid' + today.format('DD')).css({'border': '2px solid #e91e63',"box-sizing": "border-box",
+        "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
 
+    $('p#pid' + today.format('DD')).addClass('active');
 
+    let siandien = moment();
 
+    $('p#pasirinkta_diena').text('' + siandien.format('DD'));
 
+    $('.horizontal-scroll-wrapper p:nth-child(odd)').click(function (e) {
+        let diena = $(e.target).text();
+        $('p#pasirinkta_diena').text(diena);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-	function myFunction() {
-		Notification.requestPermission();
-		//     var person = prompt("Please enter your name", "Harry Potter");
-		//     if (person != null) {
-		//         localStorage.setItem("name", person);
-		//         document.getElementById("demo").innerHTML =
-		//             "Jus pasirinkote sia grupe"+person;
-		//     }
-	}
+        if ($(e.target).css('color') === 'rgb(128, 128, 128)') {
+            console.log('Praėjusi diena.');
+        } else {
+            $('p.active').removeClass('active'); //Clear all checked class on .size
+            $('p#pid' + diena).addClass('active'); //Add checked class to current clicked .size
+            console.log(diena.toString());
+            readAndDisplayData(diena.toString());
+        }
+    });
 </script>
 
 
@@ -530,331 +573,339 @@
 
 
 
+<table class="table table-dark table-striped" style="margin-top: 200px; width: 100%; margin-bottom: 50px;"
+       id="pakeitimai">
+
+    <tbody>
+    <tr>
+        <td colspan="4">JUNGIAMASI PRIE SERVERIO...</td>
+
+    </tr>
 
 
 
 
-<table class="table table-dark table-striped" style="margin-top: 160px; width: 100%; margin-bottom: 50px;"
-	   id="pakeitimai">
-
-	<tbody>
-	<tr>
-		<td colspan="4">JUNGIAMASI PRIE SERVERIO...</td>
-
-	</tr>
-
-
-
-
-	</tbody>
+    </tbody>
 </table>
 
 
 
 
 
-<script src="firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
 
 <script>
-	// Firbease Init
-	const config = {
-		apiKey: "AIzaSyCRYVIHl_orktaBMwsmlQtMcOaeGO0FTQI",
-		authDomain: "eif-courses.firebaseapp.com",
-		databaseURL: "https://eif-courses.firebaseio.com",
-		projectId: "eif-courses",
-		storageBucket: "eif-courses.appspot.com",
-		messagingSenderId: "535363326769"
-	};
-	firebase.initializeApp(config);
+    // Firbease Init
+    const config = {
+        // apiKey: "AIzaSyBfMIcfL3ixMfvsSLIiWicN24AK3NeOaMI",
+        // authDomain: "student-bcfa2.firebaseapp.com",
+        // databaseURL: "https://student-bcfa2.firebaseio.com",
+        // projectId: "student-bcfa2",
+        // storageBucket: "student-bcfa2.appspot.com",
+        // messagingSenderId: "762197849555",
+        // appId: "1:762197849555:web:fbdbbf423c11120a71ab26",
+        // measurementId: "G-ERRK6PSZ4G"
 
-Date.prototype.getWeek = function () {
-			var target  = new Date(this.valueOf());
-			var dayNr   = (this.getDay() + 6) % 7;
-			target.setDate(target.getDate() - dayNr + 3);
-			var firstThursday = target.valueOf();
-			target.setMonth(0, 1);
-			if (target.getDay() != 4) {
-				target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
-			}
-			return 1 + Math.ceil((firstThursday - target) / 604800000);
-		};
+        apiKey: "AIzaSyCRYVIHl_orktaBMwsmlQtMcOaeGO0FTQI",
+        authDomain: "eif-courses.firebaseapp.com",
+        databaseURL: "https://eif-courses.firebaseio.com",
+        projectId: "eif-courses",
+        storageBucket: "eif-courses.appspot.com",
+        messagingSenderId: "535363326769",
+        appId: "1:535363326769:web:cc13dce33cff5884925610"
 
-		  const savaitesDienaIsDB = firebase.database().ref("savaite/");
-            savaitesDienaIsDB.on("value", function (snapshot) {
+    };
+    firebase.initializeApp(config);
 
-                let d = new Date();
-                let kelinta = d.getWeek()+snapshot.val();
-                if (kelinta % 2 === 1) {
-                    $("#kelinta_savaite").text(" 1 SAVAITĖ");
+    Date.prototype.getWeek = function () {
+        var target  = new Date(this.valueOf());
+        var dayNr   = (this.getDay() + 6) % 7;
+        target.setDate(target.getDate() - dayNr + 3);
+        var firstThursday = target.valueOf();
+        target.setMonth(0, 1);
+        if (target.getDay() != 4) {
+            target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+        }
+        return 1 + Math.ceil((firstThursday - target) / 604800000);
+    };
+
+    const savaitesDienaIsDB = firebase.database().ref("savaite/");
+    savaitesDienaIsDB.on("value", function (snapshot) {
+
+        let d = new Date();
+        let kelinta = d.getWeek()+snapshot.val();
+        if (kelinta % 2 === 1) {
+            $("#kelinta_savaite").text(" 1 SAVAITĖ");
+        } else {
+            $("#kelinta_savaite").text(" 2 SAVAITĖ");
+        }
+        //console.log(snapshot.val());
+        //kelinta = d.getWeek() + snapshot.val();
+        //console.log(kelinta);
+    });
+
+    // functions.
+    // functions.database.ref('/user-posts/')
+    //     .onCreate((snapshot, context) => {
+    //         // Grab the current value of what was written to the Realtime Database.
+    //         const original = snapshot.val();
+    //         console.log('Uppercasing', context.params.pushId, original);
+    //         alert('HELLO OBJECT WAS CREATED');
+    //         const uppercase = original.toUpperCase();
+    //         // You must return a Promise when performing asynchronous tasks inside a Functions such as
+    //         // writing to the Firebase Realtime Database.
+    //         // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
+    //         return snapshot.ref.parent.child('uppercase').set(uppercase);
+    //     });
+
+
+
+    function getChangesByDate() {
+
+        const dbRefObject = firebase.database().ref("user-posts/");
+
+        const pakeitimaiDiv = document.getElementById("pakeitimai");
+
+
+
+        var ignore_first_time = 0;
+
+        dbRefObject.limitToLast(1).on("child_added", function(snapshot, prevChildKey) {
+            var newPost = snapshot.val();
+            // var local = localStorage.getItem("name");
+            // console.log("Nauji duomenys: " + newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase());
+
+
+            //if(newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() === local.toUpperCase()){
+
+
+
+            // if(newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() || newPost.destytojas.toUpperCase() ===
+            // 	"Laisvi".toUpperCase()) {
+            //     var notify1 = new Notification("Nauji paskaitų pakeitimai!!!", {
+            //         body:
+            //             newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", "+ newPost.paskaita+
+            // 			" Paskaitos nėra",
+            //         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
+            //
+            //     });
+            //     notify1.onclick = function () {
+            //         location.href = "https://pakeitimai.github.io";
+            //     }
+            // }else {
+            //     var notify2 = new Notification("Nauji paskaitų pakeitimai!!!", {
+            //         body:
+            //             newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud.",
+            //         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
+            //     });
+            //     notify2.onclick = function () {
+            //         location.href = "https://pakeitimai.github.io";
+            //     }
+            //
+            // }
+
+
+            if(ignore_first_time <= 0) {
+
+                console.log("DATABASE LOADED AND SET TO:"+ignore_first_time);
+                ignore_first_time = 1;
+
+            }else{
+
+                let data_notification = moment(newPost.date).locale('lt').format('dddd').toUpperCase();
+
+
+                if (newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() ||
+                    newPost.destytojas.toUpperCase() === "Laisvi".toUpperCase()) {
+                    navigator.serviceWorker.ready.then(function (registration) {
+                        const title = "Nauji paskaitų pakeitimai!";
+                        const options = {
+                            icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
+                            body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
+                                " Paskaitos nėra" + "\n" + data_notification
+                        };
+                        registration.showNotification(title, options);
+                    });
                 } else {
-                    $("#kelinta_savaite").text(" 2 SAVAITĖ");
+                    navigator.serviceWorker.ready.then(function (registration) {
+                        const title = "Nauji paskaitų pakeitimai!";
+                        const options = {
+                            icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
+                            body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
+                                " paskaita, " + newPost.auditorija + " aud." + "\n" + data_notification
+                        };
+                        registration.showNotification(title, options);
+                    });
                 }
-                //console.log(snapshot.val());
-                //kelinta = d.getWeek() + snapshot.val();
-                //console.log(kelinta);
+
+            }
+
+
+
+
+
+
+            // }
+            //
+            // const v = snapshot.val();
+            // console.log(v.grupe.toUpperCase());
+            //
+            // if(v.grupe.toUpperCase() === local.toUpperCase()){
+            //     var notify = new Notification(local+" GRUPĖS STUDENTAMS", "YRA pakeitimų");
+            // }
+
+            //console.log("Title: " + newPost.title);
+            //console.log("Previous Post ID: " + prevChildKey);
+        });
+
+
+
+
+
+
+
+
+
+
+        //dbRefObject.orderByChild('paskaita').on("child_added", function (snapshot) {
+
+        // var local = localStorage.getItem("name");
+        //const v = snapshot.val();
+        // console.log(v.grupe.toUpperCase());
+
+
+
+
+
+        // $("#success-alert").fadeTo(3000, 500).slideUp(2000, function(){
+        //     $("#success-alert").slideUp(2000);
+        // });
+        // });
+
+
+
+        dbRefObject.orderByChild('paskaita').on("value", function (snapshot) {
+
+            //$("#myWish").click(function showAlert() {
+
+            //});
+            let destytoju_pakeitimai = "";
+
+            pakeitimaiDiv.innerHTML = "";
+
+            document.getElementById("pakeitimai").innerHTML =
+                '<tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' + '<th>AUDITORIJA</th></tr></thead>';
+
+            const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
+                "13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
+                " - 18<sup>30</sup>", "18<sup>45</sup> - 20<sup>15</sup>", "20<sup>30</sup> - 22<sup>00</sup>"];
+
+
+            snapshot.forEach(function (data) {
+
+                const newPlayer = data.val();
+
+                if (newPlayer.date === (moment().format('ddd MMM DD YYYY'))) {
+
+                    destytoju_pakeitimai +=
+                        '<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita
+                        +'</b> '+
+                        '</td><td data-label="GRUPĖ"">' +
+                        newPlayer.grupe.toUpperCase() +
+                        '</td><td data-label="DĖSTYTOJAS"">' +
+                        newPlayer.destytojas +
+                        '</td><td data-label="AUDITORIJA">' +
+                        newPlayer.auditorija.toUpperCase() + '</td></tr>';
+                    //moment.locale('lt');
+
+                    let today = moment();
+                    today.locale('lt');
+
+                }
             });
-
-	// functions.
-	// functions.database.ref('/user-posts/')
-	//     .onCreate((snapshot, context) => {
-	//         // Grab the current value of what was written to the Realtime Database.
-	//         const original = snapshot.val();
-	//         console.log('Uppercasing', context.params.pushId, original);
-	//         alert('HELLO OBJECT WAS CREATED');
-	//         const uppercase = original.toUpperCase();
-	//         // You must return a Promise when performing asynchronous tasks inside a Functions such as
-	//         // writing to the Firebase Realtime Database.
-	//         // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
-	//         return snapshot.ref.parent.child('uppercase').set(uppercase);
-	//     });
-
-
-
-	function getChangesByDate() {
-
-		const dbRefObject = firebase.database().ref("user-posts/");
-
-		const pakeitimaiDiv = document.getElementById("pakeitimai");
-
-
-
-		var ignore_first_time = 0;
-
-		dbRefObject.limitToLast(1).on("child_added", function(snapshot, prevChildKey) {
-			var newPost = snapshot.val();
-			// var local = localStorage.getItem("name");
-			// console.log("Nauji duomenys: " + newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase());
-
-
-			//if(newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() === local.toUpperCase()){
-
-
-
-			// if(newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() || newPost.destytojas.toUpperCase() ===
-			// 	"Laisvi".toUpperCase()) {
-			//     var notify1 = new Notification("Nauji paskaitų pakeitimai!!!", {
-			//         body:
-			//             newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", "+ newPost.paskaita+
-			// 			" Paskaitos nėra",
-			//         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
-			//
-			//     });
-			//     notify1.onclick = function () {
-			//         location.href = "https://pakeitimai.github.io";
-			//     }
-			// }else {
-			//     var notify2 = new Notification("Nauji paskaitų pakeitimai!!!", {
-			//         body:
-			//             newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud.",
-			//         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
-			//     });
-			//     notify2.onclick = function () {
-			//         location.href = "https://pakeitimai.github.io";
-			//     }
-			//
-			// }
-
-
-			if(ignore_first_time <= 0) {
-
-				console.log("DATABASE LOADED AND SET TO:"+ignore_first_time);
-				ignore_first_time = 1;
-
-			}else{
-
-				let data_notification = moment(newPost.date).locale('lt').format('dddd').toUpperCase();
-
-
-				if (newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() ||
-						newPost.destytojas.toUpperCase() === "Laisvi".toUpperCase()) {
-					navigator.serviceWorker.ready.then(function (registration) {
-						const title = "Nauji paskaitų pakeitimai!";
-						const options = {
-							icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-							body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
-									" Paskaitos nėra" + "\n" + data_notification
-						};
-						registration.showNotification(title, options);
-					});
-				} else {
-					navigator.serviceWorker.ready.then(function (registration) {
-						const title = "Nauji paskaitų pakeitimai!";
-						const options = {
-							icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-							body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
-									" paskaita, " + newPost.auditorija + " aud." + "\n" + data_notification
-						};
-						registration.showNotification(title, options);
-					});
-				}
-
-			}
-
-
-
-
-
-
-			// }
-			//
-			// const v = snapshot.val();
-			// console.log(v.grupe.toUpperCase());
-			//
-			// if(v.grupe.toUpperCase() === local.toUpperCase()){
-			//     var notify = new Notification(local+" GRUPĖS STUDENTAMS", "YRA pakeitimų");
-			// }
-
-			//console.log("Title: " + newPost.title);
-			//console.log("Previous Post ID: " + prevChildKey);
-		});
-
-
-
-
-
-
-
-
-
-
-		//dbRefObject.orderByChild('paskaita').on("child_added", function (snapshot) {
-
-		// var local = localStorage.getItem("name");
-		//const v = snapshot.val();
-		// console.log(v.grupe.toUpperCase());
-
-
-
-
-
-		// $("#success-alert").fadeTo(3000, 500).slideUp(2000, function(){
-		//     $("#success-alert").slideUp(2000);
-		// });
-		// });
-
-
-
-		dbRefObject.orderByChild('paskaita').on("value", function (snapshot) {
-
-			//$("#myWish").click(function showAlert() {
-
-			//});
-			let destytoju_pakeitimai = "";
-
-			pakeitimaiDiv.innerHTML = "";
-
-			document.getElementById("pakeitimai").innerHTML =
-					'<tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' + '<th>AUDITORIJA</th></tr></thead>';
-
-			const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
-				"13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
-				" - 18<sup>30</sup>", "18<sup>45</sup> - 20<sup>15</sup>", "20<sup>30</sup> - 22<sup>00</sup>"];
-
-
-			snapshot.forEach(function (data) {
-
-				const newPlayer = data.val();
-
-				if (newPlayer.date === (moment().format('ddd MMM DD YYYY'))) {
-
-					destytoju_pakeitimai +=
-							'<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita
-							+'</b> '+
-							'</td><td data-label="GRUPĖ"">' +
-							newPlayer.grupe.toUpperCase() +
-							'</td><td data-label="DĖSTYTOJAS"">' +
-							newPlayer.destytojas +
-							'</td><td data-label="AUDITORIJA">' +
-							newPlayer.auditorija.toUpperCase() + '</td></tr>';
-					//moment.locale('lt');
-
-					let today = moment();
-					today.locale('lt');
-
-				}
-			});
-			pakeitimaiDiv.innerHTML += '<tbody>' + destytoju_pakeitimai + '</tbody>';
-			// pakeitimaiDiv.innerHTML += '<br/><br/>';
-		});
-
-	}
-	function stringifyTomorrow() {
-		let today = moment();
-		let tomorrow = today.add(1, 'days');
-		return moment(tomorrow).format("ddd MMM DD YYYY");
-	}
-
-	function currentDay() {
-		let today = moment();
-		today.locale('lt');
-
-	}
-
-	//  currentDay();
-	function nextDay() {
-		let today = moment();
-		let tomorrow = today.add(1, 'days');
-		tomorrow.locale('lt');
-
-		document.getElementById("tommorow").innerText = tomorrow.format('DD');
-		document.getElementById("currentMonthTommorow").innerText = tomorrow.format('MMMM', 'lt').toUpperCase();
-		document.getElementById("currentWeekDayTomorrow").innerText = tomorrow.format('dddd', 'lt').toUpperCase();
-
-	}
-
-	getChangesByDate();
+            pakeitimaiDiv.innerHTML += '<tbody>' + destytoju_pakeitimai + '</tbody>';
+            // pakeitimaiDiv.innerHTML += '<br/><br/>';
+        });
+
+    }
+    function stringifyTomorrow() {
+        let today = moment();
+        let tomorrow = today.add(1, 'days');
+        return moment(tomorrow).format("ddd MMM DD YYYY");
+    }
+
+    function currentDay() {
+        let today = moment();
+        today.locale('lt');
+
+    }
+
+    //  currentDay();
+    function nextDay() {
+        let today = moment();
+        let tomorrow = today.add(1, 'days');
+        tomorrow.locale('lt');
+
+        document.getElementById("tommorow").innerText = tomorrow.format('DD');
+        document.getElementById("currentMonthTommorow").innerText = tomorrow.format('MMMM', 'lt').toUpperCase();
+        document.getElementById("currentWeekDayTomorrow").innerText = tomorrow.format('dddd', 'lt').toUpperCase();
+
+    }
+
+    getChangesByDate();
 
 
 </script>
 <script>
 
-	function readAndDisplayData(diena) {
+    function readAndDisplayData(diena) {
 
-		const dbRefObject = firebase.database().ref("user-posts/");
+        const dbRefObject = firebase.database().ref("user-posts/");
 
-		const pakeitimaiDiv = document.getElementById("pakeitimai");
-		let date_from_user = diena;
+        const pakeitimaiDiv = document.getElementById("pakeitimai");
+        let date_from_user = diena;
 
 // TODO REIKIA PRIDETI LEMTELES ANTRASTE SEKANCIA IS PASKOS
-		dbRefObject.orderByChild('paskaita').on("value", function (snapshot) {
-			let keitimai = "";
-			pakeitimaiDiv.innerHTML = "";
+        dbRefObject.orderByChild('paskaita').on("value", function (snapshot) {
+            let keitimai = "";
+            pakeitimaiDiv.innerHTML = "";
 
-			document.getElementById("pakeitimai").innerHTML =
-					'<thead><tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' +
-					'<th>AUDITORIJA</th></tr></thead>';
+            document.getElementById("pakeitimai").innerHTML =
+                '<thead><tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' +
+                '<th>AUDITORIJA</th></tr></thead>';
 
-			const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
-				"13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
-				" - 18<sup>30</sup>", "18<sup>45</sup> - 20<sup>15</sup>", "20<sup>30</sup> - 22<sup>00</sup>"];
+            const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
+                "13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
+                " - 18<sup>30</sup>", "18<sup>45</sup> - 20<sup>15</sup>", "20<sup>30</sup> - 22<sup>00</sup>"];
 
-			snapshot.forEach(function (data) {
+            snapshot.forEach(function (data) {
 
-				const newPlayer = data.val();
+                const newPlayer = data.val();
 
-				let menuo = moment(newPlayer.date).locale('lt').format('MMMM');
-				let pasirinkta_diena_is_kalendoriaus = $('#stateid' + date_from_user).text();
+                let menuo = moment(newPlayer.date).locale('lt').format('MMMM');
+                let pasirinkta_diena_is_kalendoriaus = $('#stateid' + date_from_user).text();
 
-				// TODO need FIX IF STATEMENT BLOGAI TIKRINA NEKREIPIA DEMESIO I EINAMUOSIUS METUS !!!!!!
-				if (moment(newPlayer.date).format('DD') === date_from_user && menuo.toUpperCase() ===
-						pasirinkta_diena_is_kalendoriaus && moment(newPlayer.date).format('YYYY') ===
-						$('footer#txt').text().substr(0, 4)) {
-					keitimai +=
-							'<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita +
-							'</b> '+
-							'</td><td data-label="GRUPĖ">' + newPlayer.grupe.toUpperCase() +
-							'</td><td data-label="DĖSTYTOJAS">' +
-							newPlayer.destytojas + '</td><td data-label="AUDITORIJA">' +
-							newPlayer.auditorija.toUpperCase() + '</td></tr>';
-				}
+                // TODO need FIX IF STATEMENT BLOGAI TIKRINA NEKREIPIA DEMESIO I EINAMUOSIUS METUS !!!!!!
+                if (moment(newPlayer.date).format('DD') === date_from_user && menuo.toUpperCase() ===
+                    pasirinkta_diena_is_kalendoriaus && moment(newPlayer.date).format('YYYY') ===
+                    $('footer#txt').text().substr(0, 4)) {
 
-			});
-			pakeitimaiDiv.innerHTML += '<tbody>' + keitimai + '</tbody>';
-			//pakeitimaiDiv.innerHTML += '<br/>';
-		});
+                        keitimai +=
+                            '<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita +
+                            '</b> ' +
+                            '</td><td data-label="GRUPĖ">' + newPlayer.grupe.toUpperCase() +
+                            '</td><td data-label="DĖSTYTOJAS">' +
+                            newPlayer.destytojas + '</td><td data-label="AUDITORIJA">' +
+                            newPlayer.auditorija.toUpperCase() + '</td></tr>';
 
-	}
+                }
+
+            });
+            pakeitimaiDiv.innerHTML += '<tbody>' + keitimai + '</tbody>';
+            //pakeitimaiDiv.innerHTML += '<br/>';
+        });
+
+    }
 </script>
 
 
@@ -873,6 +924,9 @@ Date.prototype.getWeek = function () {
 
 </p>
 
+
+
+
 <footer id="txt" style="position: fixed; font-size: 20pt; bottom: 0; background-color: #0062cc; color: white; padding:
 2px;
 font-weight: bold; width: 100%; text-align: center;">
@@ -889,12 +943,38 @@ font-weight: bold; width: 100%; text-align: center;">
 
 
 
+<script>
 
+    function login() {
+        const promise = firebase.auth().signInWithEmailAndPassword("token@token.lt", "tokenas");
+        promise.catch(e => {
+            console.log('logged in');
+
+            console.log(e.massage)
+        });
+    }
+</script>
 
 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="/pwabuilder-sw-register.js"></script>
 
+
+<!--    <div id="token" style="color:lightblue"></div>-->
+<!--    <div id="message" style="color:lightblue"></div>-->
+<!--    <div id="notification" style="color:green"></div>-->
+<!--    <div id="error" style="color:red"></div>-->
+<!--    <script>-->
+<!--        messageElement = document.getElementById("message")-->
+<!--        tokenElement = document.getElementById("token")-->
+<!--        notificationElement = document.getElementById("notification")-->
+<!--        errorElement = document.getElementById("error")-->
+<!--    </script>-->
+
+<!--<button onclick="login()">LOGIN</button>-->
+
+
 </body>
+
 </html>
