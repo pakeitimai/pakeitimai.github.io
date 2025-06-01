@@ -1,980 +1,885 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="lt">
 <head>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>VK EIF PAKEITIMAI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- stylesheet for demo and examples -->
-    <meta name="theme-color" content="blue">
-    <meta name="description" content="VK EIF kolegijos laikinieji pakeitimai">
-
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
-          integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-    <link rel="manifest" href="/manifest.json">
-
-
-    <script>function startTime() {
-
-        let today = new Date();
-        let h = today.getHours();
-        let m = today.getMinutes();
-        let s = today.getSeconds();
-        //m = checkTime(m);
-        //s = checkTime(s);
-
-        //let timeInminutes = Number(h * 60) + Number(m);
-        // console.log(timeInminutes);
-
-        let siandien = moment();
-        siandien.locale('lt');
-        $('#txt').html(siandien.format('YYYY MM DD, dddd,').toUpperCase() + '<span id="kelinta_savaite"> 2 SAVAITĖ</span>');
-
-
-
-
-
-        //alert(d.getWeek()+1);
-
-
-
-
-
-
-
-
-
-    }
-    //document.getElementById('txt').innerHTML =+ "GEGUŽĖ 2018, TREČIADIENIS," +h + ":" + m + ":" + s;
-
-
-
-
-    </script>
-
-    <style>
-
-        table {
-            /*border: 1px solid #ccc;*/
-            border-collapse: collapse;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            font-size: 20pt;
-            table-layout: fixed;
-        }
-
-        table caption {
-            font-size: 1.5em;
-            margin: .5em 0 .75em;
-        }
-
-        table tr {
-            background-color: #cccccc;
-            /*border: 1px solid #ddd;*/
-            /*padding: .35em;*/
-        }
-
-        table th,
-        table td {
-            padding: .625em;
-            text-align: center;
-            border-bottom: 1px solid #6c757d!important;
-        }
-
-        table th {
-            /*font-size: .85em;*/
-            letter-spacing: .1em;
-            text-transform: uppercase;
-        }
-
-        /*@media screen and (max-width: 680px) {*/
-        /*table {*/
-        /*border: 0;*/
-        /*font-size: 12pt;*/
-
-        /*}*/
-        /*table caption {*/
-        /*font-size: 1.3em;*/
-        /*}*/
-
-        /*table thead {*/
-        /*border: none;*/
-        /*clip: rect(0 0 0 0);*/
-        /*height: 1px;*/
-        /*margin: -1px;*/
-        /*overflow: hidden;*/
-        /*padding: 0;*/
-        /*position: absolute;*/
-        /*width: 1px;*/
-        /*}*/
-
-        /*table tr {*/
-        /*!*border-bottom: 3px solid #ddd;*!*/
-        /*display: block;*/
-        /*margin-bottom: .625em;*/
-        /*}*/
-
-        /*table td {*/
-        /*!*border-bottom: 1px solid #ddd;*!*/
-        /*display: block;*/
-        /*!*font-size: .8em;*!*/
-        /*!*text-align: right;*!*/
-        /*}*/
-
-        /*table td::before {*/
-        /*!**/
-        /** aria-label has no advantage, it won't be read inside a table*/
-        /*content: attr(aria-label);*/
-        /**!*/
-        /*content: attr(data-label);*/
-        /*float: left;*/
-        /*font-weight: bold;*/
-        /*text-transform: uppercase;*/
-        /*}*/
-
-        /*table td:last-child {*/
-        /*border-bottom: 0;*/
-        /*}*/
-        /*.table-striped > tbody > tr:nth-child(odd) > td,*/
-        /*.table-striped > tbody > tr:nth-child(odd) > th {*/
-        /*background-color: #607d8b!important;*/
-        /*color:white;*/
-        /*font-weight: bold;*/
-        /*/ / Choose your own color here*/
-        /*}*/
-        /*}*/
-
-
-
-
-        p.active {
-            background-color: #e91e63;
-            color: white;
-        }
-
-
-
-        table tbody{
-            background-color: #ffeb3b78;
-        }
-
-
-
-
-        @media screen and (max-width: 800px) {
-            ::-webkit-scrollbar {
-                width: 1px;
-                height: 1px;
-            }
-
-            table tr, td {
-                font-size: 0.6em;
-            }
-            table th{
-                font-size:0.5em;
-            }
-
-
-            ::-webkit-scrollbar-button {
-                width: 10px;
-                height: 10px;
-                background-color: #0092ef;
-            }
-            footer{
-                font-size:1em!important;
-
-            }
-            .horizontal-scroll-wrapper {max-height: 450px!important;
-                z-index: 2000;
-
-                position: fixed;
-                display: block;
-                top: 0;
-                left: 0;
-                width: calc(150px + 1px)!important;
-                margin: 0;
-                padding-top: 1px;
-                /*background: #0092ef;*/
-                overflow-y: auto;
-                overflow-x: hidden;
-                -webkit-transform: rotate(-90deg) translateY(-150px)!important;
-                transform: rotate(-90deg) translateY(-150px)!important;
-                -webkit-transform-origin: right top;
-                transform-origin: right top;
-
-
-
-            }
-
-            .squares {
-                padding: 150px 0 0 0!important;
-            }
-            .squares > div {
-                width: 150px!important;
-                height: 150px!important;
-                margin: 10px 0;
-            }
-
-            #virsutinis_menu{
-                background:#00308f!important;
-            }
-
-
-
-
-
-
-
-        }
-
-        body{
-            background-color: whitesmoke;
-            font-family: "Verdana", Geneva, sans-serif;
-            overscroll-behavior-y: contain;
-        }
-        div {
-            box-sizing: border-box;
-        }
-
-
-
-
-
-        .horizontal-scroll-wrapper {
-            z-index: 2000;
-            position: fixed;
-            display: block;
-            top: 0;
-            left: 0;
-            width: calc(150px + 1px);
-            max-height: 2500px;
-            margin: 0;
-            padding-top: 1px;
-            /*background: #0092ef;*/
-            overflow-y: auto;
-            overflow-x: hidden;
-            -webkit-transform: rotate(-90deg) translateY(-150px);
-            transform: rotate(-90deg) translateY(-150px);
-            -webkit-transform-origin: right top;
-            transform-origin: right top;
-        }
-        .horizontal-scroll-wrapper > div {
-            display: block;
-            padding: 5px;
-            -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-            -webkit-transform-origin: right top;
-            transform-origin: right top;
-        }
-
-        .squares {
-            padding: 150px 0 0 0;
-        }
-        .squares > div {
-            width: 150px;
-            height: 150px;
-            margin: 10px 0;
-        }
-
-        .table-dark th {
-            background-color: #0062cc !important;
-            color: white!important;
-
-        }
-        .table-dark td{
-            border-top: none;
-        }
-
-        .table-striped > tbody > tr:nth-child(odd) > td,
-        .table-striped > tbody > tr:nth-child(odd) > th {
-            background-color: whitesmoke;
-            color:#5a6268;
-
-        }
-
-        .table-dark {
-
-            background-color: whitesmoke;
-        }
-
-        .table-striped > tbody > tr:nth-child(even) > td,
-        .table-striped > tbody > tr:nth-child(even) > th {
-            background-color: white;
-            color: #6c757d;
-
-        }
-
-
-        * {
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: -moz-none;
-            -o-user-select: none;
-            user-select: none;
-        }
-
-        ::-webkit-scrollbar
-        {
-            width: 5px;  /* for vertical scrollbars */
-            height: 5px; /* for horizontal scrollbars */
-        }
-
-        ::-webkit-scrollbar-track
-        {
-            background: rgba(0, 0, 0, 0.1);
-        }
-
-        ::-webkit-scrollbar-thumb
-        {
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-    </style>
-
-
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="moment/min/moment-with-locales.min.js"></script>
-
-
-
-
-
-    <script>
-        firebase.initializeApp({
-
-            apiKey: "AIzaSyCRYVIHl_orktaBMwsmlQtMcOaeGO0FTQI",
-            authDomain: "eif-courses.firebaseapp.com",
-            databaseURL: "https://eif-courses.firebaseio.com",
-            projectId: "eif-courses",
-            storageBucket: "eif-courses.appspot.com",
-            messagingSenderId: "535363326769",
-            appId: "1:535363326769:web:cc13dce33cff5884925610"
-
-            // apiKey: "AIzaSyBfMIcfL3ixMfvsSLIiWicN24AK3NeOaMI",
-            // authDomain: "student-bcfa2.firebaseapp.com",
-            // databaseURL: "https://student-bcfa2.firebaseio.com",
-            // projectId: "student-bcfa2",
-            // storageBucket: "student-bcfa2.appspot.com",
-            // messagingSenderId: "762197849555",
-            // appId: "1:762197849555:web:fbdbbf423c11120a71ab26",
-            // measurementId: "G-ERRK6PSZ4G"
-        })
-        const messaging = firebase.messaging();
-        const db = firebase.database();
-        function initFirebaseMessagingRegistration() {
-            messaging
-                .requestPermission()
-                .then(function () {
-                    //messageElement.innerHTML = "Got notification permission";
-                    console.log("Got notification permission");
-                    return messaging.getToken();
-                })
-                .then(function (token) {
-
-
-
-                 //   initFirebaseMessagingRegistration(grupe);
-
-                    let user =  {
-                        grupe:  $("#grupeSuscribe").val().toUpperCase(),
-                        tokenas : token
-                    }
-                            // User is signed in.
-                    localStorage.setItem('user', JSON.stringify(user));
-
-                    let temp = JSON.parse(localStorage.getItem('user'));
-
-                    db.ref('tokenas/'+temp.tokenas).set({
-                        data: 3000,
-                        grupe: temp.grupe,
-                        tokenas: temp.tokenas
-                    });
-                    alert('Sėkmingai užregistravote - > Informuosime pranešimais!')
-
-
-                    // print the token on the HTML page
-                   // tokenElement.innerHTML = "Token is " + token;
-                })
-                .catch(function (err) {
-                    console.log("Didn't get notification permission", err);
-                });
-
-
-            //temp.prop1; // gives "string"
-
-        }
-
-
-        messaging.onMessage(function (payload) {
-            console.log("Message received. ", JSON.stringify(payload));
-        //    notificationElement.innerHTML = notificationElement.innerHTML + " " + payload.data.notification;
-            alert('notification arrived'+payload.data.notification.title)
-        });
-        messaging.onTokenRefresh(function () {
-            messaging.getToken()
-                .then(function (refreshedToken) {
-                    console.log('Token refreshed.');
-                 //   tokenElement.innerHTML = "Token is " + refreshedToken;
-                }).catch(function (err) {
-                   // errorElement.innerHTML = "Error: " + err;
-                    console.log('Unable to retrieve refreshed token ', err);
-                });
-        });
-
-
-
-
-
-    </script>
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VK EIF Paskaitų Pakeitimai</title>
+	<meta name="description" content="VK EIF kolegijos paskaitų pakeitimų sistema">
+	<meta name="theme-color" content="#4CAF50">
+
+	<!-- Modern CSS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+	<style>
+		:root {
+			/* VK College Brand Colors */
+			--primary-gradient: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+			--primary-green: #4CAF50;
+			--primary-blue: #2196F3;
+			--accent-color: #FF9800;
+			--background-color: #f8fafc;
+			--surface-color: #ffffff;
+			--text-primary: #2d3748;
+			--text-secondary: #718096;
+			--text-white: #ffffff;
+			--border-color: #e2e8f0;
+			--shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+			--border-radius: 12px;
+			--border-radius-lg: 16px;
+			--spacing-xs: 0.5rem;
+			--spacing-sm: 0.75rem;
+			--spacing-md: 1rem;
+			--spacing-lg: 1.5rem;
+			--spacing-xl: 2rem;
+			--spacing-2xl: 3rem;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			background-color: var(--background-color);
+			color: var(--text-primary);
+			line-height: 1.6;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		/* Header */
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			background: var(--primary-gradient);
+			color: var(--text-white);
+			padding: var(--spacing-lg) var(--spacing-md);
+			z-index: 1000;
+			box-shadow: var(--shadow-lg);
+		}
+
+		.header-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.logo-section {
+			display: flex;
+			align-items: center;
+			gap: var(--spacing-md);
+		}
+
+		.logo {
+			width: 48px;
+			height: 48px;
+			background: var(--text-white);
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 800;
+			font-size: 1.5rem;
+			color: var(--primary-green);
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		.logo-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.logo-title {
+			font-size: 1.25rem;
+			font-weight: 600;
+			letter-spacing: -0.025em;
+			line-height: 1.2;
+		}
+
+		.logo-subtitle {
+			font-size: 0.875rem;
+			opacity: 0.9;
+			font-weight: 400;
+		}
+
+		.date-display {
+			font-size: 0.875rem;
+			opacity: 0.95;
+			text-align: right;
+		}
+
+		.week-indicator {
+			background: rgba(255, 255, 255, 0.25);
+			padding: var(--spacing-xs) var(--spacing-sm);
+			border-radius: 20px;
+			font-size: 0.75rem;
+			font-weight: 500;
+			margin-top: var(--spacing-xs);
+			display: inline-block;
+			backdrop-filter: blur(10px);
+		}
+
+		/* Main Content */
+		.main-container {
+			margin-top: 120px;
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: var(--spacing-md);
+		}
+
+		/* Calendar */
+		.calendar-container {
+			background: var(--surface-color);
+			border-radius: var(--border-radius-lg);
+			box-shadow: var(--shadow);
+			margin-bottom: var(--spacing-xl);
+			overflow: hidden;
+			border: 1px solid var(--border-color);
+		}
+
+		.calendar-header {
+			background: var(--primary-gradient);
+			color: var(--text-white);
+			padding: var(--spacing-lg) var(--spacing-xl);
+			text-align: center;
+			position: relative;
+		}
+
+		.calendar-header::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+			opacity: 0.3;
+		}
+
+		.calendar-header > * {
+			position: relative;
+			z-index: 1;
+		}
+
+		.calendar-header h2 {
+			font-size: 1.75rem;
+			font-weight: 700;
+			margin-bottom: var(--spacing-sm);
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+		}
+
+		.calendar-subtitle {
+			opacity: 0.9;
+			font-size: 1rem;
+			font-weight: 400;
+		}
+
+		.calendar-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+			gap: 1px;
+			background: var(--border-color);
+			padding: 1px;
+		}
+
+		.calendar-day {
+			background: var(--surface-color);
+			padding: var(--spacing-lg);
+			text-align: center;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			min-height: 100px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+			border-radius: 0;
+		}
+
+		.calendar-day:hover {
+			background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
+		}
+
+		.calendar-day.today {
+			background: var(--primary-gradient);
+			color: var(--text-white);
+			font-weight: 600;
+			box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+		}
+
+		.calendar-day.today .day-number {
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		}
+
+		.calendar-day.selected {
+			background: var(--primary-blue);
+			color: var(--text-white);
+			box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+		}
+
+		.calendar-day.past {
+			background: #f8fafc;
+			color: var(--text-secondary);
+			cursor: not-allowed;
+			opacity: 0.6;
+		}
+
+		.day-number {
+			font-size: 1.75rem;
+			font-weight: 700;
+			line-height: 1;
+			margin-bottom: var(--spacing-xs);
+		}
+
+		.day-name {
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			opacity: 0.8;
+			font-weight: 500;
+		}
+
+		.day-month {
+			font-size: 0.625rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			margin-top: 2px;
+			opacity: 0.7;
+			font-weight: 400;
+		}
+
+		/* Schedule Table */
+		.schedule-container {
+			background: var(--surface-color);
+			border-radius: var(--border-radius-lg);
+			box-shadow: var(--shadow);
+			overflow: hidden;
+			border: 1px solid var(--border-color);
+		}
+
+		.schedule-header {
+			background: var(--primary-gradient);
+			color: var(--text-white);
+			padding: var(--spacing-xl);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+		}
+
+		.schedule-header::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+		}
+
+		.schedule-header > * {
+			position: relative;
+			z-index: 1;
+		}
+
+		.schedule-title {
+			font-size: 1.5rem;
+			font-weight: 600;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+		}
+
+		.loading-indicator {
+			display: inline-flex;
+			align-items: center;
+			gap: var(--spacing-sm);
+			font-size: 0.875rem;
+			opacity: 0.9;
+		}
+
+		.spinner {
+			width: 20px;
+			height: 20px;
+			border: 2px solid rgba(255, 255, 255, 0.3);
+			border-top: 2px solid var(--text-white);
+			border-radius: 50%;
+			animation: spin 1s linear infinite;
+		}
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+
+		.schedule-table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 0.875rem;
+		}
+
+		.schedule-table th {
+			background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+			padding: var(--spacing-lg);
+			text-align: left;
+			font-weight: 600;
+			border-bottom: 2px solid var(--primary-green);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			font-size: 0.75rem;
+			color: var(--text-primary);
+		}
+
+		.schedule-table td {
+			padding: var(--spacing-lg);
+			border-bottom: 1px solid var(--border-color);
+			vertical-align: top;
+		}
+
+		.schedule-table tbody tr:hover {
+			background: linear-gradient(135deg, #f8fafc 0%, #e8f5e8 100%);
+		}
+
+		.lecture-time {
+			font-weight: 600;
+			color: var(--primary-blue);
+			font-size: 1rem;
+		}
+
+		.group-name {
+			font-weight: 600;
+			color: var(--text-primary);
+		}
+
+		.teacher-name {
+			color: var(--text-secondary);
+		}
+
+		.room-number {
+			background: linear-gradient(135deg, var(--accent-color) 0%, #ff7043 100%);
+			color: var(--text-white);
+			padding: 0.25rem 0.75rem;
+			border-radius: 20px;
+			font-weight: 500;
+			font-size: 0.75rem;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		}
+
+		/* Empty State */
+		.empty-state {
+			text-align: center;
+			padding: var(--spacing-2xl);
+			color: var(--text-secondary);
+		}
+
+		.empty-state-icon {
+			font-size: 4rem;
+			margin-bottom: var(--spacing-lg);
+			opacity: 0.6;
+		}
+
+		.empty-state h3 {
+			font-size: 1.25rem;
+			font-weight: 600;
+			margin-bottom: var(--spacing-sm);
+			color: var(--text-primary);
+		}
+
+		/* Mobile Optimization */
+		@media (max-width: 768px) {
+			.header {
+				padding: var(--spacing-md);
+			}
+
+			.header-content {
+				flex-direction: column;
+				gap: var(--spacing-md);
+				text-align: center;
+			}
+
+			.logo-section {
+				justify-content: center;
+			}
+
+			.date-display {
+				text-align: center;
+			}
+
+			.main-container {
+				padding: var(--spacing-sm);
+				margin-top: 140px;
+			}
+
+			.calendar-grid {
+				grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+			}
+
+			.calendar-day {
+				min-height: 80px;
+				padding: var(--spacing-sm);
+			}
+
+			.day-number {
+				font-size: 1.25rem;
+			}
+
+			.day-name {
+				font-size: 0.625rem;
+			}
+
+			.schedule-table {
+				font-size: 0.75rem;
+			}
+
+			.schedule-table th,
+			.schedule-table td {
+				padding: var(--spacing-sm);
+			}
+
+			/* Stack table cells on very small screens */
+			@media (max-width: 480px) {
+				.schedule-table,
+				.schedule-table thead,
+				.schedule-table tbody,
+				.schedule-table th,
+				.schedule-table td,
+				.schedule-table tr {
+					display: block;
+				}
+
+				.schedule-table thead tr {
+					position: absolute;
+					top: -9999px;
+					left: -9999px;
+				}
+
+				.schedule-table tr {
+					background: var(--surface-color);
+					border: 1px solid var(--border-color);
+					border-radius: var(--border-radius);
+					margin-bottom: var(--spacing-md);
+					padding: var(--spacing-md);
+					box-shadow: var(--shadow);
+				}
+
+				.schedule-table td {
+					border: none;
+					padding: var(--spacing-xs) 0;
+					position: relative;
+					padding-left: 30%;
+				}
+
+				.schedule-table td:before {
+					content: attr(data-label) ": ";
+					position: absolute;
+					left: 0;
+					width: 25%;
+					text-align: left;
+					font-weight: 600;
+					color: var(--text-secondary);
+				}
+			}
+		}
+
+		.status-message {
+			background: linear-gradient(135deg, #e8f5e8 0%, #e3f2fd 100%);
+			border: 1px solid var(--primary-green);
+			border-radius: var(--border-radius);
+			padding: var(--spacing-lg);
+			margin: var(--spacing-md);
+			color: var(--primary-blue);
+			text-align: center;
+		}
+
+		/* Focus states for accessibility */
+		.calendar-day:focus,
+		button:focus {
+			outline: 3px solid var(--accent-color);
+			outline-offset: 2px;
+		}
+
+		/* Smooth animations */
+		@media (prefers-reduced-motion: reduce) {
+			* {
+				animation-duration: 0.01ms !important;
+				animation-iteration-count: 1 !important;
+				transition-duration: 0.01ms !important;
+			}
+		}
+	</style>
 </head>
 
-<body onload="startTime();">
+<body>
+<!-- Header -->
+<header class="header">
+	<div class="header-content">
+		<div class="logo-section">
+			<div class="logo">VK</div>
+			<div class="logo-text">
+				<div class="logo-title">EIF Paskaitų Pakeitimai</div>
+				<div class="logo-subtitle">Vilniaus kolegija</div>
+			</div>
+		</div>
+		<div class="date-display">
+			<div id="current-date">Kraunama...</div>
+			<!--			<div class="week-indicator" id="week-indicator">...</div>-->
+		</div>
+	</div>
+</header>
 
+<!-- Main Content -->
+<main class="main-container">
+	<!-- Calendar -->
+	<section class="calendar-container">
+		<div class="calendar-header">
+			<h2 id="calendar-month">Kraunama...</h2>
+			<p class="calendar-subtitle">Pasirinkite dieną pakeitimams peržiūrėti</p>
+		</div>
+		<div class="calendar-grid" id="calendar-grid">
+			<!-- Calendar days will be generated by JavaScript -->
+			<div class="empty-state">
+				<div class="empty-state-icon">⏳</div>
+				<p>Generuojamas kalendorius...</p>
+			</div>
+		</div>
+	</section>
 
+	<!-- Schedule -->
+	<section class="schedule-container">
+		<div class="schedule-header">
+			<h2 class="schedule-title">Paskaitų pakeitimai</h2>
+			<div class="loading-indicator" id="loading-indicator" style="display: none;">
+				<div class="spinner"></div>
+				<span>Kraunama...</span>
+			</div>
+		</div>
 
+		<div id="schedule-content">
+			<div class="empty-state">
+				<div class="empty-state-icon">📅</div>
+				<h3>Pasirinkite dieną</h3>
+				<p>Pašamkite dieną kalendoriuje, kad pamatytumėte paskaitų pakeitimus</p>
+			</div>
+		</div>
+	</section>
+</main>
 
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/lt.min.js"></script>
 
-<div style="position: fixed;  background: #9e9e9e; min-height: 151px; width: 100%; top:0"></div>
-
-
-<!--<div class="input-group mb-3" style="top:154px; width: 320px; position:fixed;">-->
-<!--    <input id="grupeSuscribe" type="text" class="form-control" placeholder="Nurodykite grupę:">-->
-<!--    <div class="input-group-append">-->
-<!--        <button class="btn btn-danger" type="button" onclick="initFirebaseMessagingRegistration()"><i class="far fa-bell"></i> Prenumeruoti</button>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-
-
-<div class="horizontal-scroll-wrapper squares ">
-
-</div>
-
-
-
+<!-- Firebase v8 (compatible with your existing setup) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
 <script>
-    function pasirinktaGrupe(){
-        let testas = JSON.parse(localStorage.getItem('user'));
-        $('#grupeSuscribe').val(testas.grupe)
-    }
+	// Lithuanian weekday names
+	const lithuanianDays = {
+		0: 'Sekmadienis',
+		1: 'Pirmadienis',
+		2: 'Antradienis',
+		3: 'Trečiadienis',
+		4: 'Ketvirtadienis',
+		5: 'Penktadienis',
+		6: 'Šeštadienis'
+	};
+
+	const lithuanianMonths = {
+		0: 'Sausis', 1: 'Vasaris', 2: 'Kovas', 3: 'Balandis',
+		4: 'Gegužė', 5: 'Birželis', 6: 'Liepa', 7: 'Rugpjūtis',
+		8: 'Rugsėjis', 9: 'Spalis', 10: 'Lapkritis', 11: 'Gruodis'
+	};
+
+	// Firebase configuration
+	const firebaseConfig = {
+		apiKey: "AIzaSyCRYVIHl_orktaBMwsmlQtMcOaeGO0FTQI",
+		authDomain: "eif-courses.firebaseapp.com",
+		databaseURL: "https://eif-courses.firebaseio.com",
+		projectId: "eif-courses",
+		storageBucket: "eif-courses.appspot.com",
+		messagingSenderId: "535363326769"
+	};
+
+	class ScheduleApp {
+		constructor() {
+			this.selectedDate = null;
+			this.today = new Date();
+			this.currentMonth = new Date(this.today.getFullYear(), this.today.getMonth(), 1);
+			this.database = null;
+			this.init();
+		}
+
+		async init() {
+			try {
+				// Initialize Firebase
+				if (!firebase.apps.length) {
+					firebase.initializeApp(firebaseConfig);
+				}
+				this.database = firebase.database();
+
+				this.updateCurrentDate();
+				this.generateCalendar();
+				this.setupEventListeners();
+
+				// Auto-select today
+				this.selectDateByDate(this.today);
+
+				// Update time every minute
+				setInterval(() => this.updateCurrentDate(), 60000);
+
+				console.log('App initialized successfully');
+			} catch (error) {
+				console.error('Failed to initialize app:', error);
+				this.showError('Nepavyko inicializuoti aplikacijos');
+			}
+		}
+
+		updateCurrentDate() {
+			const now = new Date();
+			const weekNumber = this.getWeekNumber(now);
+			const isOddWeek = weekNumber % 2 === 1;
+
+			const dateStr = `${now.getFullYear()} ${String(now.getMonth() + 1).padStart(2, '0')} ${String(now.getDate()).padStart(2, '0')}, ${lithuanianDays[now.getDay()]}`;
+
+			document.getElementById('current-date').textContent = dateStr.toUpperCase();
+			//document.getElementById('week-indicator').textContent = `${isOddWeek ? '1' : '2'} SAVAITĖ`;
+		}
+
+		getWeekNumber(date) {
+			const firstDayOfYear = new Date(date.getFullYear(), 0, 1);
+			const pastDaysOfYear = (date - firstDayOfYear) / 86400000;
+			return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+		}
+
+		generateCalendar() {
+			const calendarGrid = document.getElementById('calendar-grid');
+			const monthHeader = document.getElementById('calendar-month');
+
+			monthHeader.textContent = `${lithuanianMonths[this.currentMonth.getMonth()]} ${this.currentMonth.getFullYear()}`.toUpperCase();
+			calendarGrid.innerHTML = '';
+
+			// Generate only 10 weekdays starting from today (single row)
+			let daysAdded = 0;
+			let dayOffset = 0;
+
+			while (daysAdded < 9) {
+				const date = new Date(this.today);
+				date.setDate(this.today.getDate() + dayOffset);
+
+				// Skip weekends (Saturday = 6, Sunday = 0)
+				if (date.getDay() !== 0 && date.getDay() !== 6) {
+					const dayElement = this.createDayElement(date);
+					calendarGrid.appendChild(dayElement);
+					daysAdded++;
+				}
+
+				dayOffset++;
+			}
+		}
+
+		createDayElement(date) {
+			const dayElement = document.createElement('div');
+			dayElement.className = 'calendar-day';
+			dayElement.setAttribute('data-date', this.formatDateForComparison(date));
+			dayElement.setAttribute('tabindex', '0');
+			dayElement.setAttribute('role', 'button');
+			dayElement.setAttribute('aria-label', `Pasirinkti ${lithuanianMonths[date.getMonth()]} ${date.getDate()} dieną`);
+
+			// Add classes based on date
+			const today = new Date();
+			today.setHours(0, 0, 0, 0);
+			const compareDate = new Date(date);
+			compareDate.setHours(0, 0, 0, 0);
+
+			if (compareDate.getTime() === today.getTime()) {
+				dayElement.classList.add('today');
+			}
+			if (compareDate < today) {
+				dayElement.classList.add('past');
+			}
+
+			dayElement.innerHTML = `
+                    <div class="day-number">${String(date.getDate()).padStart(2, '0')}</div>
+                    <div class="day-name">${lithuanianDays[date.getDay()]}</div>
+                    <div class="day-month">${lithuanianMonths[date.getMonth()]}</div>
+                `;
+
+			return dayElement;
+		}
+
+		setupEventListeners() {
+			const calendarGrid = document.getElementById('calendar-grid');
+
+			calendarGrid.addEventListener('click', (e) => {
+				const dayElement = e.target.closest('.calendar-day');
+				if (dayElement && !dayElement.classList.contains('past')) {
+					this.selectDate(dayElement);
+				}
+			});
+
+			calendarGrid.addEventListener('keydown', (e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					const dayElement = e.target.closest('.calendar-day');
+					if (dayElement && !dayElement.classList.contains('past')) {
+						e.preventDefault();
+						this.selectDate(dayElement);
+					}
+				}
+			});
+		}
+
+		selectDate(dayElement) {
+			// Remove previous selection
+			document.querySelectorAll('.calendar-day.selected')
+					.forEach(el => el.classList.remove('selected'));
+
+			// Add selection to clicked day
+			dayElement.classList.add('selected');
+
+			// Update selected date
+			const dateStr = dayElement.getAttribute('data-date');
+			this.selectedDate = this.parseDateString(dateStr);
+
+			// Load schedule for selected date
+			this.loadScheduleForDate(this.selectedDate);
+		}
+
+		selectDateByDate(date) {
+			const dateStr = this.formatDateForComparison(date);
+			const dayElement = document.querySelector(`[data-date="${dateStr}"]`);
+			if (dayElement) {
+				this.selectDate(dayElement);
+			}
+		}
+
+		formatDateForComparison(date) {
+			// Format: "Mon Jun 02 2025"
+			const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+			const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+			return `${days[date.getDay()]} ${months[date.getMonth()]} ${String(date.getDate()).padStart(2, '0')} ${date.getFullYear()}`;
+		}
+
+		parseDateString(dateStr) {
+			return new Date(dateStr);
+		}
+
+		loadScheduleForDate(date) {
+			if (!this.database) {
+				this.showError('Duombazės ryšys neprieinamas');
+				return;
+			}
+
+			const loadingIndicator = document.getElementById('loading-indicator');
+			loadingIndicator.style.display = 'flex';
+
+			const dateStr = this.formatDateForComparison(date);
+
+			const dbRef = this.database.ref('user-posts/');
+
+			dbRef.orderByChild('date').equalTo(dateStr).once('value')
+					.then(snapshot => {
+						loadingIndicator.style.display = 'none';
+						this.renderSchedule(snapshot, date);
+					})
+					.catch(error => {
+						console.error('Error loading schedule:', error);
+						loadingIndicator.style.display = 'none';
+						this.showError('Nepavyko užkrauti duomenų');
+					});
+		}
+
+		renderSchedule(snapshot, date) {
+			const scheduleContent = document.getElementById('schedule-content');
+			const scheduleData = [];
+
+			snapshot.forEach(childSnapshot => {
+				scheduleData.push(childSnapshot.val());
+			});
+
+			if (scheduleData.length === 0) {
+				scheduleContent.innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-state-icon">✅</div>
+                            <h3>Pakeitimų nėra</h3>
+                            <p>${lithuanianMonths[date.getMonth()]} ${date.getDate()} dienai pakeitimų nėra</p>
+                        </div>
+                    `;
+				return;
+			}
+
+			// Sort by lecture time
+			scheduleData.sort((a, b) => {
+				const timeA = parseInt(a.paskaita) || 0;
+				const timeB = parseInt(b.paskaita) || 0;
+				return timeA - timeB;
+			});
+
+			const tableHTML = `
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Paskaita</th>
+                                <th>Grupė</th>
+                                <th>Dėstytojas</th>
+                                <th>Auditorija</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${scheduleData.map(item => `
+                                <tr>
+                                    <td data-label="Paskaita" class="lecture-time">
+                                        <strong>${item.paskaita || 'N/A'}</strong>
+                                    </td>
+                                    <td data-label="Grupė" class="group-name">
+                                        ${(item.grupe || '').toUpperCase()}
+                                    </td>
+                                    <td data-label="Dėstytojas" class="teacher-name">
+                                        ${item.destytojas || 'N/A'}
+                                    </td>
+                                    <td data-label="Auditorija">
+                                        <span class="room-number">${(item.auditorija || 'N/A').toUpperCase()}</span>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                `;
+
+			scheduleContent.innerHTML = tableHTML;
+		}
+
+		showError(message) {
+			const scheduleContent = document.getElementById('schedule-content');
+			scheduleContent.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">⚠️</div>
+                        <h3>Klaida</h3>
+                        <p>${message}</p>
+                    </div>
+                `;
+		}
+	}
+
+	// Initialize app when DOM is loaded
+	document.addEventListener('DOMContentLoaded', () => {
+		new ScheduleApp();
+	});
+
+	// Request notification permission
+	if ('Notification' in window && Notification.permission === 'default') {
+		Notification.requestPermission();
+	}
 </script>
-
-
-<script>
-
-
-
-
-
-
-    let date = moment(new Date()),
-        begin = moment(date).isoWeekday(1);
-
-    begin.startOf('iweek');
-    begin.locale('lt');
-
-    let today = moment();
-    today.locale('lt');
-
-    let past_day = Number(today.format('DD') - 1);
-
-    // EIF LOGOTIPAS
-    //  $('div.horizontal-scroll-wrapper').append('<div style=""></div>');
-
-
-    for (let i = 0; i < 18; i++) {
-
-        $(".horizontal-scroll-wrapper").append('<div id="' + begin.format('DD') + '"' +
-            'style="background-color: white; color:black; align-items: center;   \n' +
-            '                 border:1px solid gray; padding: 5px;">\n' +
-            '          <p style="font-size: 45pt;" align="center" id="pid' + begin.format('DD') +
-            '">' +
-            begin.format('DD') + '</p>\n' +
-            '          <p style="font-weight: bold; padding:5px; font-size: 8pt; color:black; margin-top: -22px;" align="center">' +
-            moment(begin).locale('lt').format('dddd').toUpperCase() + '</p>\n' +
-            '<div style="font-size: 10pt;     margin-top: -25px;" align="center" id="stateid' +
-            begin.format('DD') +
-            '">' +
-            begin.format('MMMM', 'lt').toUpperCase() + '</div>' +
-            '        </div>');
-
-        if (i === 5 || i === 6) {
-            console.log(begin.format('DD'));
-            $("#" + begin.format('DD')).hide();
-        }
-        // Kalendoriaus elementu krastai
-//                $('p#pid' + begin.format('DD')).css({'border': '1px solid grey', "padding":"0",
-//                    "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
-        $('div#' + begin.format('DD')).css({'border-right': '2px solid grey'});
-        $('p#pid' + begin.format('DD')).css({'border': '2px solid grey', "padding":"10px",
-            "box-sizing": "border-box", "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
-
-        // -moz-box-sizing: border-box;
-        //-webkit-box-sizing: border-box;
-        begin.add(1, 'd');
-
-    }
-
-    for (let k = 1; k < 10; k++) {
-        $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
-            "color": "grey"});
-        if($('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
-            "color": "grey"})){
-
-            $('div#' + moment().subtract(k, 'days').startOf('day').format('DD')).css({"background-color": "#ccc",
-                "color": "grey"}).remove();
-
-            //alert('PRAEJUSI DIENA');
-        }
-
-    }
-
-    // $('div#' + today.format('DD')).css({'border': '7px solid black', "border-radius":"20px"});
-
-
-
-
-    $('p#pid' + today.format('DD')).css({'border': '2px solid #e91e63',"box-sizing": "border-box",
-        "-moz-box-sizing": "border-box", "-webkit-box-sizing": "border-box"});
-
-    $('p#pid' + today.format('DD')).addClass('active');
-
-    let siandien = moment();
-
-    $('p#pasirinkta_diena').text('' + siandien.format('DD'));
-
-    $('.horizontal-scroll-wrapper p:nth-child(odd)').click(function (e) {
-        let diena = $(e.target).text();
-        $('p#pasirinkta_diena').text(diena);
-
-        if ($(e.target).css('color') === 'rgb(128, 128, 128)') {
-            console.log('Praėjusi diena.');
-        } else {
-            $('p.active').removeClass('active'); //Clear all checked class on .size
-            $('p#pid' + diena).addClass('active'); //Add checked class to current clicked .size
-            console.log(diena.toString());
-            readAndDisplayData(diena.toString());
-        }
-    });
-</script>
-
-
-
-
-
-
-<table class="table table-dark table-striped" style="margin-top: 151px; width: 100%; margin-bottom: 50px;"
-       id="pakeitimai">
-
-    <tbody>
-    <tr>
-        <td colspan="4">JUNGIAMASI PRIE SERVERIO...</td>
-
-    </tr>
-
-
-
-
-    </tbody>
-</table>
-
-
-
-
-
-<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
-
-<script>
-    // Firbease Init
-    const config = {
-        // apiKey: "AIzaSyBfMIcfL3ixMfvsSLIiWicN24AK3NeOaMI",
-        // authDomain: "student-bcfa2.firebaseapp.com",
-        // databaseURL: "https://student-bcfa2.firebaseio.com",
-        // projectId: "student-bcfa2",
-        // storageBucket: "student-bcfa2.appspot.com",
-        // messagingSenderId: "762197849555",
-        // appId: "1:762197849555:web:fbdbbf423c11120a71ab26",
-        // measurementId: "G-ERRK6PSZ4G"
-
-        apiKey: "AIzaSyCRYVIHl_orktaBMwsmlQtMcOaeGO0FTQI",
-        authDomain: "eif-courses.firebaseapp.com",
-        databaseURL: "https://eif-courses.firebaseio.com",
-        projectId: "eif-courses",
-        storageBucket: "eif-courses.appspot.com",
-        messagingSenderId: "535363326769",
-        appId: "1:535363326769:web:cc13dce33cff5884925610"
-
-    };
-    firebase.initializeApp(config);
-
-    Date.prototype.getWeek = function () {
-        var target  = new Date(this.valueOf());
-        var dayNr   = (this.getDay() + 6) % 7;
-        target.setDate(target.getDate() - dayNr + 3);
-        var firstThursday = target.valueOf();
-        target.setMonth(0, 1);
-        if (target.getDay() != 4) {
-            target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
-        }
-        return 1 + Math.ceil((firstThursday - target) / 604800000);
-    };
-
-    const savaitesDienaIsDB = firebase.database().ref("savaite/");
-    savaitesDienaIsDB.on("value", function (snapshot) {
-
-        let d = new Date();
-        let kelinta = d.getWeek()+snapshot.val();
-        if (kelinta % 2 === 1) {
-            $("#kelinta_savaite").text(" 1 SAVAITĖ");
-        } else {
-            $("#kelinta_savaite").text(" 2 SAVAITĖ");
-        }
-        //console.log(snapshot.val());
-        //kelinta = d.getWeek() + snapshot.val();
-        //console.log(kelinta);
-    });
-
-    // functions.
-    // functions.database.ref('/user-posts/')
-    //     .onCreate((snapshot, context) => {
-    //         // Grab the current value of what was written to the Realtime Database.
-    //         const original = snapshot.val();
-    //         console.log('Uppercasing', context.params.pushId, original);
-    //         alert('HELLO OBJECT WAS CREATED');
-    //         const uppercase = original.toUpperCase();
-    //         // You must return a Promise when performing asynchronous tasks inside a Functions such as
-    //         // writing to the Firebase Realtime Database.
-    //         // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
-    //         return snapshot.ref.parent.child('uppercase').set(uppercase);
-    //     });
-
-
-
-    function getChangesByDate() {
-
-        const dbRefObject = firebase.database().ref("user-posts/");
-
-        const pakeitimaiDiv = document.getElementById("pakeitimai");
-
-
-
-        var ignore_first_time = 0;
-
-        dbRefObject.limitToLast(1).on("child_added", function(snapshot, prevChildKey) {
-            var newPost = snapshot.val();
-            // var local = localStorage.getItem("name");
-            // console.log("Nauji duomenys: " + newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase());
-
-
-            //if(newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() === local.toUpperCase()){
-
-
-
-            // if(newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() || newPost.destytojas.toUpperCase() ===
-            // 	"Laisvi".toUpperCase()) {
-            //     var notify1 = new Notification("Nauji paskaitų pakeitimai!!!", {
-            //         body:
-            //             newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", "+ newPost.paskaita+
-            // 			" Paskaitos nėra",
-            //         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
-            //
-            //     });
-            //     notify1.onclick = function () {
-            //         location.href = "https://pakeitimai.github.io";
-            //     }
-            // }else {
-            //     var notify2 = new Notification("Nauji paskaitų pakeitimai!!!", {
-            //         body:
-            //             newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita + " paskaita, " + newPost.auditorija + " aud.",
-            //         icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg"
-            //     });
-            //     notify2.onclick = function () {
-            //         location.href = "https://pakeitimai.github.io";
-            //     }
-            //
-            // }
-
-
-            if(ignore_first_time <= 0) {
-
-                console.log("DATABASE LOADED AND SET TO:"+ignore_first_time);
-                ignore_first_time = 1;
-
-            }else{
-
-                let data_notification = moment(newPost.date).locale('lt').format('dddd').toUpperCase();
-
-
-                if (newPost.destytojas.toUpperCase() === "Paskaitos nėra".toUpperCase() ||
-                    newPost.destytojas.toUpperCase() === "Laisvi".toUpperCase()) {
-                    navigator.serviceWorker.ready.then(function (registration) {
-                        const title = "Nauji paskaitų pakeitimai!";
-                        const options = {
-                            icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-                            body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
-                                " Paskaitos nėra" + "\n" + data_notification
-                        };
-                        registration.showNotification(title, options);
-                    });
-                } else {
-                    navigator.serviceWorker.ready.then(function (registration) {
-                        const title = "Nauji paskaitų pakeitimai!";
-                        const options = {
-                            icon: "https://eif.viko.lt/media/uploads/sites/5/2017/08/EIF.jpg",
-                            body: newPost.grupe.replace(/<[^>]+>/g, '').toUpperCase() + ", " + newPost.paskaita +
-                                " paskaita, " + newPost.auditorija + " aud." + "\n" + data_notification
-                        };
-                        registration.showNotification(title, options);
-                    });
-                }
-
-            }
-
-
-
-
-
-
-            // }
-            //
-            // const v = snapshot.val();
-            // console.log(v.grupe.toUpperCase());
-            //
-            // if(v.grupe.toUpperCase() === local.toUpperCase()){
-            //     var notify = new Notification(local+" GRUPĖS STUDENTAMS", "YRA pakeitimų");
-            // }
-
-            //console.log("Title: " + newPost.title);
-            //console.log("Previous Post ID: " + prevChildKey);
-        });
-
-
-
-
-
-
-
-
-
-
-        //dbRefObject.orderByChild('paskaita').on("child_added", function (snapshot) {
-
-        // var local = localStorage.getItem("name");
-        //const v = snapshot.val();
-        // console.log(v.grupe.toUpperCase());
-
-
-
-
-
-        // $("#success-alert").fadeTo(3000, 500).slideUp(2000, function(){
-        //     $("#success-alert").slideUp(2000);
-        // });
-        // });
-
-
-
-        dbRefObject.orderByChild('paskaita').on("value", function (snapshot) {
-
-            //$("#myWish").click(function showAlert() {
-
-            //});
-            let destytoju_pakeitimai = "";
-
-            pakeitimaiDiv.innerHTML = "";
-
-            document.getElementById("pakeitimai").innerHTML =
-                '<tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' + '<th>AUDITORIJA</th></tr></thead>';
-
-            const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
-                "13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
-                " - 18<sup>30</sup>", "18<sup>45</sup> - 20<sup>15</sup>", "20<sup>30</sup> - 22<sup>00</sup>"];
-
-
-            snapshot.forEach(function (data) {
-
-                const newPlayer = data.val();
-
-                if (newPlayer.date === (moment().format('ddd MMM DD YYYY'))) {
-
-                    destytoju_pakeitimai +=
-                        '<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita
-                        +'</b> '+
-                        '</td><td data-label="GRUPĖ"">' +
-                        newPlayer.grupe.toUpperCase() +
-                        '</td><td data-label="DĖSTYTOJAS"">' +
-                        newPlayer.destytojas +
-                        '</td><td data-label="AUDITORIJA">' +
-                        newPlayer.auditorija.toUpperCase() + '</td></tr>';
-                    //moment.locale('lt');
-
-                    let today = moment();
-                    today.locale('lt');
-
-                }
-            });
-            pakeitimaiDiv.innerHTML += '<tbody>' + destytoju_pakeitimai + '</tbody>';
-            // pakeitimaiDiv.innerHTML += '<br/><br/>';
-        });
-
-    }
-    function stringifyTomorrow() {
-        let today = moment();
-        let tomorrow = today.add(1, 'days');
-        return moment(tomorrow).format("ddd MMM DD YYYY");
-    }
-
-    function currentDay() {
-        let today = moment();
-        today.locale('lt');
-
-    }
-
-    //  currentDay();
-    function nextDay() {
-        let today = moment();
-        let tomorrow = today.add(1, 'days');
-        tomorrow.locale('lt');
-
-        document.getElementById("tommorow").innerText = tomorrow.format('DD');
-        document.getElementById("currentMonthTommorow").innerText = tomorrow.format('MMMM', 'lt').toUpperCase();
-        document.getElementById("currentWeekDayTomorrow").innerText = tomorrow.format('dddd', 'lt').toUpperCase();
-
-    }
-
-    getChangesByDate();
-
-
-</script>
-<script>
-
-    function readAndDisplayData(diena) {
-
-        const dbRefObject = firebase.database().ref("user-posts/");
-
-        const pakeitimaiDiv = document.getElementById("pakeitimai");
-        let date_from_user = diena;
-
-// TODO REIKIA PRIDETI LEMTELES ANTRASTE SEKANCIA IS PASKOS
-        dbRefObject.orderByChild('paskaita').on("value", function (snapshot) {
-            let keitimai = "";
-            pakeitimaiDiv.innerHTML = "";
-
-            document.getElementById("pakeitimai").innerHTML =
-                '<thead><tr><th>PASKAITA</th>' + '<th>GRUPĖ</th>' + '<th>DĖSTYTOJAS</th>' +
-                '<th>AUDITORIJA</th></tr></thead>';
-
-            const laiko_intervalas = ["7<sup>45</sup> - 9<sup>15</sup>", "9<sup>30</sup> - 11<sup>00</sup>", "11<sup>45</sup> - 13<sup>15</sup>",
-                "13<sup>30</sup> - 15<sup>00</sup>", "15<sup>15</sup> - 16<sup>45</sup>", "17<sup>15</sup>" +
-                " - 18<sup>30</sup>", "18<sup>45</sup> - 20<sup>15</sup>", "20<sup>30</sup> - 22<sup>00</sup>"];
-
-            snapshot.forEach(function (data) {
-
-                const newPlayer = data.val();
-
-                let menuo = moment(newPlayer.date).locale('lt').format('MMMM');
-                let pasirinkta_diena_is_kalendoriaus = $('#stateid' + date_from_user).text();
-
-                // TODO need FIX IF STATEMENT BLOGAI TIKRINA NEKREIPIA DEMESIO I EINAMUOSIUS METUS !!!!!!
-                if (moment(newPlayer.date).format('DD') === date_from_user && menuo.toUpperCase() ===
-                    pasirinkta_diena_is_kalendoriaus && moment(newPlayer.date).format('YYYY') ===
-                    $('footer#txt').text().substr(0, 4)) {
-
-                        keitimai +=
-                            '<tr><td data-label="PASKAITA" style="text-align: center;"><b>' + newPlayer.paskaita +
-                            '</b> ' +
-                            '</td><td data-label="GRUPĖ">' + newPlayer.grupe.toUpperCase() +
-                            '</td><td data-label="DĖSTYTOJAS">' +
-                            newPlayer.destytojas + '</td><td data-label="AUDITORIJA">' +
-                            newPlayer.auditorija.toUpperCase() + '</td></tr>';
-
-                }
-
-            });
-            pakeitimaiDiv.innerHTML += '<tbody>' + keitimai + '</tbody>';
-            //pakeitimaiDiv.innerHTML += '<br/>';
-        });
-
-    }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p id="pasirinkta_diena" style="color:whitesmoke;">
-
-</p>
-
-
-
-
-<footer id="txt" style="position: fixed; font-size: 20pt; bottom: 0; background-color: #0062cc; color: white; padding:
-2px;
-font-weight: bold; width: 100%; text-align: center;">
-
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-
-    function login() {
-        const promise = firebase.auth().signInWithEmailAndPassword("token@token.lt", "tokenas");
-        promise.catch(e => {
-            console.log('logged in');
-
-            console.log(e.massage)
-        });
-    }
-</script>
-
-
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="/pwabuilder-sw-register.js"></script>
-
-
-<!--    <div id="token" style="color:lightblue"></div>-->
-<!--    <div id="message" style="color:lightblue"></div>-->
-<!--    <div id="notification" style="color:green"></div>-->
-<!--    <div id="error" style="color:red"></div>-->
-<!--    <script>-->
-<!--        messageElement = document.getElementById("message")-->
-<!--        tokenElement = document.getElementById("token")-->
-<!--        notificationElement = document.getElementById("notification")-->
-<!--        errorElement = document.getElementById("error")-->
-<!--    </script>-->
-
-<!--<button onclick="login()">LOGIN</button>-->
-
-
 </body>
-
 </html>
